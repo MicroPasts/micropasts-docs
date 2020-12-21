@@ -1,0 +1,40 @@
+site_name: MicroPasts Crowdsourcing Documentation
+copyright: 'Copyright © 2013 - 2020: UCL, The British Museum, University of
+Cambridge, University of Stirling and SciFabric'
+
+theme:
+  name: material
+markdown_extensions:
+    - toc:
+        permalink: True
+    - admonition
+    - smarty
+    - wikilinks
+    - codehilite:
+        linenums: True
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: True
+    - pymdownx.tilde
+nav:
+  - Home: 'index.md'
+  - API:
+      - 'Introduction': 'api/intro.md'
+extra:
+  palette:
+      primary: '#087da1'
+      accent: '#00a889'
+  font:
+      text: 'Source Sans Pro'
