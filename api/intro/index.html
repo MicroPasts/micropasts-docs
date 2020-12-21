@@ -1,0 +1,518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Introduction - MicroPasts Crowdsourcing Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-restful-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="MicroPasts Crowdsourcing Documentation" class="md-header-nav__button md-logo" aria-label="MicroPasts Crowdsourcing Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MicroPasts Crowdsourcing Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MicroPasts Crowdsourcing Documentation" class="md-nav__button md-logo" aria-label="MicroPasts Crowdsourcing Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MicroPasts Crowdsourcing Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    <label class="md-nav__link" for="nav-2">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-restful-api" class="md-nav__link">
+    The RESTful API
+  </a>
+  
+    <nav class="md-nav" aria-label="The RESTful API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-and-the-api" class="md-nav__link">
+    Rate Limit and the API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-example-usage-of-the-api" class="md-nav__link">
+    Command line Example Usage of the API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pybossa-endpoints" class="md-nav__link">
+    PYBOSSA endpoints
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-restful-api" class="md-nav__link">
+    The RESTful API
+  </a>
+  
+    <nav class="md-nav" aria-label="The RESTful API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-and-the-api" class="md-nav__link">
+    Rate Limit and the API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-example-usage-of-the-api" class="md-nav__link">
+    Command line Example Usage of the API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pybossa-endpoints" class="md-nav__link">
+    PYBOSSA endpoints
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Introduction</h1>
+                
+                <p>Our MicroPasts installation of Pybossa provides two API endpoints:</p>
+<ul>
+<li>the RESTful API located at <a href="https://crowdsourced.micropasts.org/api">https://crowdsourced.micropasts.org/api</a> and,</li>
+<li>the rest of the endpoints of the server</li>
+</ul>
+<p>In this guide, we only cover the basics of what Pybossa can achieve and the calls
+that are likely to be needed for analysis work.  For fuller
+documentation refer to the <a href="https://docs.pybossa.com/api/intro/">official documentation from Scifabric</a></p>
+<h2 id="the-restful-api">The RESTful API<a class="headerlink" href="#the-restful-api" title="Permanent link">&para;</a></h2>
+<p>The JSON based RESTful API is located at:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">https://crowdsourced.micropasts.org/api</span>
+</code></pre></div>
+</td></tr></table>
+<p>These endpoints use PYBOSSA domain objects. It has the following structure:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">https://crowdsourced.micropasts.org/api/{domainobject}[?arg1=value1&amp;arg2=value2...]</span>
+</code></pre></div>
+</td></tr></table>
+<p>A domain object will be one of the following:</p>
+<ul>
+<li>Project</li>
+<li>Task</li>
+<li>TaskRun</li>
+<li>Result</li>
+<li>Blog post</li>
+<li>Announcement</li>
+<li>Helpingmaterial</li>
+<li>User</li>
+<li>Category.</li>
+</ul>
+<p>You can then access any of those items via the API, using its name in the {domainobject} section and querying its attributes.</p>
+<p>Some requests will need a <strong>API-KEY</strong> to authenticate &amp; authorize the operation. You can get your API-KEY in your <em>profile</em> account.</p>
+<p>The returned objects will have a <strong>links</strong> and <strong>link</strong> fields, not
+included in the model to support <a href="http://en.wikipedia.org/wiki/HATEOAS">Hypermedia as the Engine of
+Application State</a> (also known as HATEOAS), so you can understand which are the relations between objects.</p>
+<p>All objects will return a field <strong>link</strong> which will be the absolute URL for that specific object within the API. If the object has some parents, you will find the relations in the <strong>links</strong> list. For example, for a Task Run you will get something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+<span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;&lt;link rel=&#39;parent&#39; title=&#39;project&#39; href=&#39;https://crowdsourced.micropasts.org/api/project/90&#39;/&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;&lt;link rel=&#39;parent&#39; title=&#39;task&#39; href=&#39;https://crowdsourced.micropasts.org/api/task/5894&#39;/&gt;&quot;</span>
+<span class="p">],</span>
+<span class="nt">&quot;task_id&quot;</span><span class="p">:</span> <span class="mi">5894</span><span class="p">,</span>
+<span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-07-07T17:23:45.714184&quot;</span><span class="p">,</span>
+<span class="nt">&quot;finish_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-07-07T17:23:45.714210&quot;</span><span class="p">,</span>
+<span class="nt">&quot;calibration&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+<span class="nt">&quot;user_ip&quot;</span><span class="p">:</span> <span class="s2">&quot;X.X.X.X&quot;</span><span class="p">,</span>
+<span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;link rel=&#39;self&#39; title=&#39;taskrun&#39; href=&#39;https://crowdsourced.micropasts.org/api/taskrun/8969&#39;/&gt;&quot;</span><span class="p">,</span>
+<span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">8969</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>The <em>object</em> link will have a tag <strong>rel</strong> equal to <strong>self</strong>, while the
+parent objects will be tagged with <strong>parent</strong>. The <strong>title</strong> field is
+used to specify the type of the object: task, task run or project.</li>
+<li>Projects will not have a <strong>links</strong> field because these objects do not
+have parents.</li>
+<li>Tasks will have only one parent: the associated project.</li>
+<li>Task Runs will have only two parents: the associated task and associated project.</li>
+<li>Results will have two parents: the associated project and task.</li>
+<li>Helping materials will have only one parent: the project.</li>
+<li>Blog posts will have only one parent: the project.</li>
+<li>Announcements will not have any parent.</li>
+</ul>
+<h3 id="rate-limit-and-the-api">Rate Limit and the API<a class="headerlink" href="#rate-limit-and-the-api" title="Permanent link">&para;</a></h3>
+<p>Rate Limiting has been enabled for all the API endpoints (since PYBOSSA v2.0.1).
+Rate-limiting gives any user, using the IP, <strong>a window of 15 minutes to do at most 300 requests per endpoint</strong>.</p>
+<p>This feature adds to the request headers the following values:</p>
+<ul>
+<li><strong>X-RateLimit-Limit</strong>: the rate limit ceiling for that given request</li>
+<li><strong>X-RateLimit-Remaining</strong>: the number of requests left for the 15
+    minute window</li>
+<li><strong>X-RateLimit-Reset</strong>: the remaining window before the rate limit
+    resets in UTC epoch seconds</li>
+</ul>
+<p>We recommend using the Python package <strong>requests</strong> for interacting with PYBOSSA,
+as it is straightforward to check those values:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://crowdsourced.micropasts.org/api/project&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-RateLimit-Remaining&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span> <span class="c1"># Sleep for 5 minutes</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">pass</span> <span class="c1"># Do your stuff</span>
+</code></pre></div>
+<h3 id="command-line-example-usage-of-the-api">Command line Example Usage of the API<a class="headerlink" href="#command-line-example-usage-of-the-api" title="Permanent link">&para;</a></h3>
+<p>Create a Project object:</p>
+<div class="highlight"><pre><span></span><code>curl -X POST -H &quot;Content-Type:application/json&quot; -s -d &#39;{&quot;name&quot;:&quot;myproject&quot;, &quot;info&quot;:{&quot;xyz&quot;:1}}&#39; &#39;https://crowdsourced.micropasts.org/api/project?api_key=API-KEY&#39;
+</code></pre></div>
+<h2 id="pybossa-endpoints">PYBOSSA endpoints<a class="headerlink" href="#pybossa-endpoints" title="Permanent link">&para;</a></h2>
+<p>These are the endpoints that you usually visit using the pybossa-default-theme or in other words, the routes that are defined in PYBOSSA for the user.</p>
+<p>For example, while you can get information about a project using the  RESTful API:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">https://crowdsourced.micropasts.org/api/project?short_name=foo</span>
+</code></pre></div>
+</td></tr></table>
+<p>You can also get information about the project using the following URL:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">https://crowdsourced.micropasts.org/project/foo/</span>
+</code></pre></div>
+</td></tr></table>
+<p>That URL by default it will return HTML, but you can ask the server to return it in JSON format. While the RESTful API only returns the objects as they are in the database, these other endpoints can return more data, like for example the list of projects a user has participated.</p>
+<div class="admonition tip">
+<p class="admonition-title">Single Page Applications (SPA)</p>
+<p>If you want to build a SPA, when you create the routes, please, re-use the PYBOSSA ones as it will be easier for you to follow redirects. Also, this is important for other parts, like validation of emails, etc. Otherwise, you will have to handle those redirections in your web server.</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2013 - 2020: UCL, The British Museum, University of Cambridge, University of Stirling and SciFabric
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
