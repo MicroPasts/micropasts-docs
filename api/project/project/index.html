@@ -1,0 +1,3563 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Options - MicroPasts Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project-creation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="MicroPasts Documentation" class="md-header-nav__button md-logo" aria-label="MicroPasts Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MicroPasts Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Options
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MicroPasts Documentation" class="md-nav__button md-logo" aria-label="MicroPasts Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MicroPasts Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Setup" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../setup/intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../setup/installing_pybossa/" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../setup/plugins/" class="md-nav__link">
+      Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../setup/importers/" class="md-nav__link">
+      Importers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Installation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/gettingstarted/" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/guide/" class="md-nav__link">
+      Installing the server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/configuration/" class="md-nav__link">
+      Configuring PYBOSSA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/deployment/" class="md-nav__link">
+      Deploying PYBOSSA with Nginx and uWsgi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/admin/" class="md-nav__link">
+      Administrating PYBOSSA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/vagrant/" class="md-nav__link">
+      Testing PYBOSSA with Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/security/" class="md-nav__link">
+      Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/vagrant/" class="md-nav__link">
+      Testing PYBOSSA with Vagrant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Building a project
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Building a project" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Building a project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/overview/" class="md-nav__link">
+      Quickstart: Creating a project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/pbs/" class="md-nav__link">
+      Using the command line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/tutorial/" class="md-nav__link">
+      Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/project_settings/" class="md-nav__link">
+      Configuring the project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/webhooks/" class="md-nav__link">
+      Real time data analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/capture/" class="md-nav__link">
+      Data capturing: image, video or audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../build/model/" class="md-nav__link">
+      Domain model
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Projects
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Projects" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projects/introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projects/creating-a-new-project/" class="md-nav__link">
+      Creating a new project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projects/cudl/" class="md-nav__link">
+      Creating a CUDL project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../theme/intro/" class="md-nav__link">
+      Theme
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    <label class="md-nav__link" for="nav-7">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jamstack/" class="md-nav__link">
+      Jamstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crud/" class="md-nav__link">
+      CRUD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fulltextsearch/" class="md-nav__link">
+      Full text search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sso/" class="md-nav__link">
+      Disqus Single Sign On
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6" checked>
+    <label class="md-nav__link" for="nav-7-6">
+      Projects
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Projects" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        <span class="md-nav__icon md-icon"></span>
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6-1" type="checkbox" id="nav-7-6-1" >
+    <label class="md-nav__link" for="nav-7-6-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-6-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filtering/" class="md-nav__link">
+      Filtering data to several project IDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../statistics/" class="md-nav__link">
+      Statistics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6-2" type="checkbox" id="nav-7-6-2" checked>
+    <label class="md-nav__link" for="nav-7-6-2">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-6-2">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Options
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Options
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-creation" class="md-nav__link">
+    Project creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-blog-list" class="md-nav__link">
+    Project blog list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-task-presenter-editor" class="md-nav__link">
+    Project task presenter editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-delete" class="md-nav__link">
+    Project delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-update" class="md-nav__link">
+    Project update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-reset-secret-key" class="md-nav__link">
+    Project reset secret key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tasks-browse" class="md-nav__link">
+    Project tasks browse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tasks-import" class="md-nav__link">
+    Project tasks import
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tutorial" class="md-nav__link">
+    Project tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-shortname" class="md-nav__link">
+    Project shortname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-settings" class="md-nav__link">
+    Project settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-results" class="md-nav__link">
+    Project results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-stats" class="md-nav__link">
+    Project stats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tasks" class="md-nav__link">
+    Project tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-task-id" class="md-nav__link">
+    Project task id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-category" class="md-nav__link">
+    Project Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-category-featured" class="md-nav__link">
+    Project Category Featured
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-category-draft" class="md-nav__link">
+    Project Category Draft
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7" >
+    <label class="md-nav__link" for="nav-7-7">
+      Tasks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tasks" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-7">
+        <span class="md-nav__icon md-icon"></span>
+        Tasks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-7-1" type="checkbox" id="nav-7-7-1" >
+    <label class="md-nav__link" for="nav-7-7-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-7-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../task/favorites/" class="md-nav__link">
+      Favorites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../task/participated/" class="md-nav__link">
+      Excluding contributed tasks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../task/newtask/" class="md-nav__link">
+      Requesting a task
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../task/external/" class="md-nav__link">
+      External user ID
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-8" type="checkbox" id="nav-7-8" >
+    <label class="md-nav__link" for="nav-7-8">
+      TaskRuns
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="TaskRuns" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-8">
+        <span class="md-nav__icon md-icon"></span>
+        TaskRuns
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-8-1" type="checkbox" id="nav-7-8-1" >
+    <label class="md-nav__link" for="nav-7-8-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../taskrun/intro/" class="md-nav__link">
+      Attaching files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-9" type="checkbox" id="nav-7-9" >
+    <label class="md-nav__link" for="nav-7-9">
+      User
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="User" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-9">
+        <span class="md-nav__icon md-icon"></span>
+        User
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-9-1" type="checkbox" id="nav-7-9-1" >
+    <label class="md-nav__link" for="nav-7-9-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-9-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user/intro/" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user/progress/" class="md-nav__link">
+      Project progress
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-9-2" type="checkbox" id="nav-7-9-2" >
+    <label class="md-nav__link" for="nav-7-9-2">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-9-2">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user/account/" class="md-nav__link">
+      Account
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user/admin/" class="md-nav__link">
+      Admins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-10" type="checkbox" id="nav-7-10" >
+    <label class="md-nav__link" for="nav-7-10">
+      Helping materials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Helping materials" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-10">
+        <span class="md-nav__icon md-icon"></span>
+        Helping materials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-10-1" type="checkbox" id="nav-7-10-1" >
+    <label class="md-nav__link" for="nav-7-10-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-10-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../helpingmaterial/intro/" class="md-nav__link">
+      Attaching files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-11" type="checkbox" id="nav-7-11" >
+    <label class="md-nav__link" for="nav-7-11">
+      Pages
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Pages" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-11">
+        <span class="md-nav__icon md-icon"></span>
+        Pages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-11-1" type="checkbox" id="nav-7-11-1" >
+    <label class="md-nav__link" for="nav-7-11-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-11-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../page/intro/" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-12" type="checkbox" id="nav-7-12" >
+    <label class="md-nav__link" for="nav-7-12">
+      Blog posts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Blog posts" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-12">
+        <span class="md-nav__icon md-icon"></span>
+        Blog posts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-12-1" type="checkbox" id="nav-7-12-1" >
+    <label class="md-nav__link" for="nav-7-12-1">
+      RESTful API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="RESTful API" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-12-1">
+        <span class="md-nav__icon md-icon"></span>
+        RESTful API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blogpost/intro/" class="md-nav__link">
+      Attaching files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-13" type="checkbox" id="nav-7-13" >
+    <label class="md-nav__link" for="nav-7-13">
+      Leaderboard
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Leaderboard" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-13">
+        <span class="md-nav__icon md-icon"></span>
+        Leaderboard
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-13-1" type="checkbox" id="nav-7-13-1" >
+    <label class="md-nav__link" for="nav-7-13-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-13-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../leaderboard/" class="md-nav__link">
+      Methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-14" type="checkbox" id="nav-7-14" >
+    <label class="md-nav__link" for="nav-7-14">
+      Home page
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Home page" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-14">
+        <span class="md-nav__icon md-icon"></span>
+        Home page
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-14-1" type="checkbox" id="nav-7-14-1" >
+    <label class="md-nav__link" for="nav-7-14-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-14-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../home/" class="md-nav__link">
+      Methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-15" type="checkbox" id="nav-7-15" >
+    <label class="md-nav__link" for="nav-7-15">
+      Announcement
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Announcement" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-15">
+        <span class="md-nav__icon md-icon"></span>
+        Announcement
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-15-1" type="checkbox" id="nav-7-15-1" >
+    <label class="md-nav__link" for="nav-7-15-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-15-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../announcement/" class="md-nav__link">
+      Methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-16" type="checkbox" id="nav-7-16" >
+    <label class="md-nav__link" for="nav-7-16">
+      Categories
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Categories" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-16">
+        <span class="md-nav__icon md-icon"></span>
+        Categories
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-16-1" type="checkbox" id="nav-7-16-1" >
+    <label class="md-nav__link" for="nav-7-16-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-16-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../categories/" class="md-nav__link">
+      Methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-17" type="checkbox" id="nav-7-17" >
+    <label class="md-nav__link" for="nav-7-17">
+      Administration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Administration" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-17">
+        <span class="md-nav__icon md-icon"></span>
+        Administration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-17-1" type="checkbox" id="nav-7-17-1" >
+    <label class="md-nav__link" for="nav-7-17-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-17-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/dashboard/" class="md-nav__link">
+      Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/featured/" class="md-nav__link">
+      Featured projects
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-18" type="checkbox" id="nav-7-18" >
+    <label class="md-nav__link" for="nav-7-18">
+      Help
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Help" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-18">
+        <span class="md-nav__icon md-icon"></span>
+        Help
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-18-1" type="checkbox" id="nav-7-18-1" >
+    <label class="md-nav__link" for="nav-7-18-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-18-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../help/" class="md-nav__link">
+      Methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-19" type="checkbox" id="nav-7-19" >
+    <label class="md-nav__link" for="nav-7-19">
+      Server stats
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Server stats" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-19">
+        <span class="md-nav__icon md-icon"></span>
+        Server stats
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-19-1" type="checkbox" id="nav-7-19-1" >
+    <label class="md-nav__link" for="nav-7-19-1">
+      PYBOSSA endpoints
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="PYBOSSA endpoints" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-19-1">
+        <span class="md-nav__icon md-icon"></span>
+        PYBOSSA endpoints
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stats/" class="md-nav__link">
+      Methods
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../github/intro/" class="md-nav__link">
+      Github
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../gdpr/" class="md-nav__link">
+      GDPR
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../faq/" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-creation" class="md-nav__link">
+    Project creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-blog-list" class="md-nav__link">
+    Project blog list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-task-presenter-editor" class="md-nav__link">
+    Project task presenter editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-delete" class="md-nav__link">
+    Project delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-update" class="md-nav__link">
+    Project update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-reset-secret-key" class="md-nav__link">
+    Project reset secret key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tasks-browse" class="md-nav__link">
+    Project tasks browse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tasks-import" class="md-nav__link">
+    Project tasks import
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tutorial" class="md-nav__link">
+    Project tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-shortname" class="md-nav__link">
+    Project shortname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-settings" class="md-nav__link">
+    Project settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-results" class="md-nav__link">
+    Project results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-stats" class="md-nav__link">
+    Project stats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tasks" class="md-nav__link">
+    Project tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-task-id" class="md-nav__link">
+    Project task id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-category" class="md-nav__link">
+    Project Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-category-featured" class="md-nav__link">
+    Project Category Featured
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-category-draft" class="md-nav__link">
+    Project Category Draft
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Options</h1>
+                
+                <h2 id="project-creation">Project creation<a class="headerlink" href="#project-creation" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/new</strong></p>
+<p><em>Allowed methods</em>: <strong>GET/POST</strong></p>
+<p><strong>GET</strong></p>
+<p>Gives you the list of required fields in the form to create a project.</p>
+<ul>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+<li><strong>form</strong>: The form fields that need to be sent for creating the
+    project. It contains the CSRF token for validating the POST, as well
+    as an errors field in case that something is wrong.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;form&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;csrf&quot;</span><span class="p">:</span> <span class="s2">&quot;token&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;projects/new.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Create a Project&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-blog-list">Project blog list<a class="headerlink" href="#project-blog-list" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/blog</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Gives you the list of posted blogs by the given project short name.</p>
+<ul>
+<li><strong>blogposts</strong>: All the blog posts for the given project.</li>
+<li><strong>project</strong>: Info about the project.</li>
+</ul>
+<p>The project and owner fields will have more information if the owner of
+the project does the request, providing its private information like
+api_key, password keys, etc. Otherwise, it will be removed and only show
+public info.</p>
+<p><strong>Example public output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;blogposts&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;Please, e-mail us to alejasan 4t ucm dot es if you find any bug. Thanks.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-05-14T14:25:04.899079&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">1377</span><span class="p">,</span>
+      <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;We are working on the Alpha version.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="mi">3927</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">137051</span><span class="p">,</span>
+  <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">1070561</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">169671</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">17499</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-13T15:28:08.420187&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;container&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">32814</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;3 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">32814</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-22T15:09:23.691811&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Image pattern recognition&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;container&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;58.png&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dark Skies ISS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;darkskies&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.491496&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;projects/blog.html&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-task-presenter-editor">Project task presenter editor<a class="headerlink" href="#project-task-presenter-editor" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/tasks/taskpresentereditor</strong></p>
+<p><em>Allowed methods</em>: <strong>GET/POST</strong></p>
+<p><strong>GET</strong></p>
+<p>This endpoint allows you to get the list of available templates for the
+current project. This will only happen when the project has an empty template, otherwise, it will load the template for you.</p>
+<ul>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+<li><strong>presenters</strong>: List of available templates (in HTML format). The
+    name of them without the &lsquo;.html&rsquo; will be the argument for the endpoint.</li>
+<li><strong>last_activit</strong>: last activity of the project.</li>
+<li><strong>n_task_runs</strong>: number of task runs.</li>
+<li><strong>n_tasks</strong>: number of tasks.</li>
+<li><strong>n_volunteers</strong>: number of volunteers.</li>
+<li><strong>owner</strong>: information about the owner.</li>
+<li><strong>pro_features</strong>: which pro features are enabled.</li>
+<li><strong>pro_features</strong>: which pro features are enabled.</li>
+<li><strong>project</strong>: info about the project.</li>
+<li><strong>status</strong>: status of the flash message.</li>
+<li><strong>flash</strong>: flash message.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+ <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;strong&gt;Note&lt;/strong&gt; You will need to upload the tasks using the&lt;a href=\&quot;/project/asdf123/tasks/import\&quot;&gt; CSV importer&lt;/a&gt; or download the project bundle and run the &lt;strong&gt;createTasks.py&lt;/strong&gt; script in your computer&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+ <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;confirmation_email_sent&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-15T11:30:42.660450&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;email_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba@prueba.com&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba de json&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">12030</span><span class="p">,</span>
+   <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pruebaadfadfa&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">4411</span><span class="p">,</span>
+   <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;6 months ago&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">11134</span><span class="p">,</span>
+   <span class="nt">&quot;valid_email&quot;</span><span class="p">:</span> <span class="kc">true</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;presenters&quot;</span><span class="p">:</span> <span class="p">[</span>
+   <span class="s2">&quot;projects/presenters/basic.html&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;projects/presenters/image.html&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;projects/presenters/sound.html&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;projects/presenters/video.html&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;projects/presenters/map.html&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;projects/presenters/pdf.html&quot;</span>
+ <span class="p">],</span>
+ <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+   <span class="nt">&quot;contacted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;contrib_button&quot;</span><span class="p">:</span> <span class="s2">&quot;draft&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-11T09:37:43.613007&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;adsf&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+   <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;passwd_hash&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+     <span class="nt">&quot;task_presenter&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;adsf&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;n_blogposts&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;n_results&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf1324&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;owner_id&quot;</span><span class="p">:</span> <span class="mi">12030</span><span class="p">,</span>
+   <span class="nt">&quot;published&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;73aee9df-be47-4e4c-8192-3a8bf0ab5161&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf123&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-15T13:20:48.022328&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;info&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;projects/task_presenter_options.html&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: asdf1324 &amp;middot; Task Presenter Editor&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>}</p>
+</blockquote>
+<p>If you want to preload the template from one of the available prenters, you have to pass the following argument: <strong>?template=basic</strong> for the basic or <strong>?template=iamge</strong> for the image template.</p>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+ <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+ <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;Your code will be &lt;em&gt;automagically&lt;/em&gt; rendered in                       the &lt;strong&gt;preview section&lt;/strong&gt;. Click in the                       preview button!&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;form&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;csrf&quot;</span><span class="p">:</span> <span class="s2">&quot;token&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;editor&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;div class=\&quot;row\&quot;&gt;\n    &lt;div class=\&quot;col-md-12\&quot;&gt;\n        &lt;h1&gt;Write here your HTML Task Presenter&lt;/h1&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;script type=\&quot;text/javascript\&quot;&gt;\n(function() {\n    // Your JavaScript code\n    pybossa.taskLoaded(function(task, deferred){\n        // When the task is loaded, do....\n    });\n\n    pybossa.presentTask(function(task, deferred){\n        // Present the current task to the user\n        // Load the task data into the HTML DOM\n    });\n\n    pybossa.run(&#39;asdf123&#39;);\n})();\n&lt;/script&gt;&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+ <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;confirmation_email_sent&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-15T11:30:42.660450&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;email_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba@prueba.com&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba de json&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pruebaadfadfa&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">4411</span><span class="p">,</span>
+   <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;6 months ago&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">11134</span><span class="p">,</span>
+   <span class="nt">&quot;valid_email&quot;</span><span class="p">:</span> <span class="kc">true</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+   <span class="nt">&quot;contacted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;contrib_button&quot;</span><span class="p">:</span> <span class="s2">&quot;draft&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-11T09:37:43.613007&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;adsf&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+   <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;passwd_hash&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+     <span class="nt">&quot;task_presenter&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;adsf&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;n_blogposts&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;n_results&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf1324&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;owner_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;published&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;73aee9df-be47-4e4c-8192-3a8bf0ab5161&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf123&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-15T13:20:48.022328&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;info&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;projects/task_presenter_editor.html&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: asdf1324 &amp;middot; Task Presenter Editor&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>}</p>
+</blockquote>
+<p>Then, you can use that template, or if you prefer you can do a POST
+directly without that information. As in any other request involving a POST you will need the CSRFToken to validate it.</p>
+<p><strong>POST</strong></p>
+<p>To send a valid POST request, you need to pass the <em>csrf token</em> in the headers. Use the following header: &ldquo;X-CSRFToken&rdquo;. You will have to POST the data fields found in the previous example, as it contains the information about the fields: specifically <strong>editor</strong> with the
+HTML/CSS/JS that you want to provide.</p>
+<p>If the post is successful, you will get the following output:</p>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;i class=\&quot;icon-ok\&quot;&gt;&lt;/i&gt; Task presenter added!&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;/project/asdf123/tasks/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-delete">Project delete<a class="headerlink" href="#project-delete" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/delete</strong></p>
+<p><em>Allowed methods</em>: <strong>GET/POST</strong></p>
+<p><strong>GET</strong></p>
+<p>The GET endpoint allows you to get all the info about the project (see
+the Project endpoint as well) as well as the csrf token. As this
+endpoint does not have any form, the csrf token is not inside the form
+field.</p>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;csrf&quot;</span><span class="p">:</span> <span class="s2">&quot;token&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;confirmation_email_sent&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-15T11:30:42.660450&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba@prueba.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;prueba de json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pruebaadfadfa&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">4411</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;6 months ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">11134</span><span class="p">,</span>
+    <span class="nt">&quot;valid_email&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;contacted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-15T15:02:12.160810&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;algo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;owner_id&quot;</span><span class="p">:</span> <span class="mi">12030</span><span class="p">,</span>
+    <span class="nt">&quot;published&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;c5a77943-f5a4-484a-86bb-d69559e80357&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;algo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-15T15:02:12.160823&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/delete.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: algo &amp;middot; Delete&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>POST</strong></p>
+<p>To send a valid POST request you need to pass the <em>csrf token</em> in the
+headers. Use the following header: &ldquo;X-CSRFToken&rdquo;.</p>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;Project deleted!&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;/account/pruebaadfadfa/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-update">Project update<a class="headerlink" href="#project-update" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/update</strong></p>
+<p><em>Allowed methods</em>: <strong>GET/POST</strong></p>
+<p><strong>GET</strong></p>
+<p>It returns a JSON object with the following information:</p>
+<ul>
+<li><strong>form</strong>: the form fields that need to be sent for updating the
+    project. It contains the csrf token for validating the post, as well as an errors field in case that something is wrong.</li>
+<li><strong>upload_form</strong>: the form fields that need to be sent for updating
+    the project&rsquo;s avatar. It contains the csrf token for validating the
+    post, as well as an errors field in case that something is wrong.</li>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: The title for the view.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;form&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;csrf&quot;</span><span class="p">:</span> <span class="s2">&quot;token&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3117</span><span class="p">,</span>
+    <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;long description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;protect&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;slug&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;confirmation_email_sent&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-06-06T06:27:18.760254&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;email.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">2414</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;4 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">2414</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">11134</span><span class="p">,</span>
+    <span class="nt">&quot;valid_email&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;contacted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;contrib_button&quot;</span><span class="p">:</span> <span class="s2">&quot;can_contribute&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-06-29T08:23:14.201331&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;passwd_hash&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;task_presenter&quot;</span><span class="p">:</span> <span class="s2">&quot;HTML+CSS+JS,</span>
+<span class="s2">      &quot;</span><span class="kc">t</span><span class="err">humb</span><span class="kc">na</span><span class="err">il</span><span class="s2">&quot;: &quot;</span><span class="kc">t</span><span class="err">humb</span><span class="kc">na</span><span class="err">il.p</span><span class="kc">n</span><span class="err">g</span><span class="s2">&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;</span><span class="err">lo</span><span class="kc">n</span><span class="err">g_descrip</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="s2">&quot;: &quot;</span><span class="err">lo</span><span class="kc">n</span><span class="err">g</span> <span class="err">descrip</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="kc">n</span><span class="err">_blogpos</span><span class="kc">ts</span><span class="s2">&quot;: 0,</span>
+<span class="s2">    &quot;</span><span class="kc">n</span><span class="err">_resul</span><span class="kc">ts</span><span class="s2">&quot;: 0,</span>
+<span class="s2">    &quot;</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot;: &quot;</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="err">ow</span><span class="kc">ner</span><span class="err">_id</span><span class="s2">&quot;: 0,</span>
+<span class="s2">    &quot;</span><span class="err">published</span><span class="s2">&quot;: true,</span>
+<span class="s2">    &quot;</span><span class="err">secre</span><span class="kc">t</span><span class="err">_key</span><span class="s2">&quot;: &quot;</span><span class="err">key</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="err">shor</span><span class="kc">t</span><span class="err">_</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot;: &quot;</span><span class="err">slug</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="err">upda</span><span class="kc">te</span><span class="err">d</span><span class="s2">&quot;: &quot;</span><span class="mi">2017-03-16</span><span class="err">T</span><span class="mi">14</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mf">45.055331</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="err">webhook</span><span class="s2">&quot;: null</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;</span><span class="kc">te</span><span class="err">mpla</span><span class="kc">te</span><span class="s2">&quot;: &quot;</span><span class="err">/projec</span><span class="kc">ts</span><span class="err">/upda</span><span class="kc">te</span><span class="err">.h</span><span class="kc">t</span><span class="err">ml</span><span class="s2">&quot;,</span>
+<span class="s2">  &quot;</span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="s2">&quot;: &quot;</span><span class="err">Projec</span><span class="kc">t</span><span class="p">:</span> <span class="kc">na</span><span class="err">me</span> <span class="err">&amp;middo</span><span class="kc">t</span><span class="err">;</span> <span class="err">Upda</span><span class="kc">te</span><span class="s2">&quot;,</span>
+<span class="s2">  &quot;</span><span class="err">upload_</span><span class="kc">f</span><span class="err">orm</span><span class="s2">&quot;: {</span>
+<span class="s2">    &quot;</span><span class="err">ava</span><span class="kc">tar</span><span class="s2">&quot;: null,</span>
+<span class="s2">    &quot;</span><span class="err">csr</span><span class="kc">f</span><span class="s2">&quot;: &quot;</span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="err">errors</span><span class="s2">&quot;: {},</span>
+<span class="s2">    &quot;</span><span class="err">id</span><span class="s2">&quot;: null,</span>
+<span class="s2">    &quot;</span><span class="err">x</span><span class="mi">1</span><span class="s2">&quot;: 0,</span>
+<span class="s2">    &quot;</span><span class="err">x</span><span class="mi">2</span><span class="s2">&quot;: 0,</span>
+<span class="s2">    &quot;</span><span class="err">y</span><span class="mi">1</span><span class="s2">&quot;: 0,</span>
+<span class="s2">    &quot;</span><span class="err">y</span><span class="mi">2</span><span class="err">&quot;: 0</span>
+<span class="err">  }</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>POST</strong></p>
+<p>To send a valid POST request, you need to pass the <em>csrf token</em> in the headers. Use the following header: &ldquo;X-CSRFToken.&rdquo;</p>
+<p>As this endpoint supports <strong>two</strong> different forms, you must specify
+which form are you targeting adding an extra key: <strong>btn</strong>. The options
+for this key are:</p>
+<blockquote>
+<p><strong>Upload</strong>: to update the <strong>upload_form</strong>.</p>
+</blockquote>
+<p>The other one does not need this extra key.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure to respect the Uppercase in the first letter. Otherwise, it will fail.</p>
+</div>
+<p>It returns a JSON object with the following information:</p>
+<ul>
+<li><strong>flash</strong>: A success message, or error indicating if the request was
+    successful.</li>
+<li><strong>form</strong>: the form fields with the sent information. It contains the
+    csrf token for validating the post, as well as an errors field in    the case that something is wrong.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;Your profile has been updated!&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;/account/pruebaadfadfa/update&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If there&rsquo;s an error in the form fields, you will get them in the
+<strong>form.errors</strong> key:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;Please correct the errors&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;form&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;csrf&quot;</span><span class="p">:</span> <span class="s2">&quot;token&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;This field is required.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3117</span><span class="p">,</span>
+    <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;new description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;new name&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;protect&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For updating the avatar is very important to not set the <em>Content-Type</em>. If
+you  are using jQuery, set it to False, so the file is handled properly.
+To still recieve a JSON response you can add the response_format=json query
+paramater to your request.</p>
+<p>The (x1,x2,y1,y2) are the coordinates for cutting the image and create
+the avatar.</p>
+<p>(x1,y1) are the offset left of the cropped area and the offset top of the cropped area respectively; and (x2,y2) are the width and height of the crop. And don&rsquo;t forget to add an extra key to the form-data: &lsquo;btn&rsquo; with a value Upload to select this form.</p>
+</div>
+<h2 id="project-reset-secret-key">Project reset secret key<a class="headerlink" href="#project-reset-secret-key" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/resetsecretkey</strong></p>
+<p><em>Allowed methods</em>: <strong>POST</strong></p>
+<p>Resets the secret key of a project.</p>
+<p>To send a valid POST request, you need to pass the <em>csrf token</em> in the
+headers. Use the following header: &ldquo;X-CSRFToken&rdquo; retrieved from the GET
+endpoint <strong>/project/&lt;short_name&gt;/update</strong>.</p>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;New secret key generated&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;/project/flickrproject2/update&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-tasks-browse">Project tasks browse<a class="headerlink" href="#project-tasks-browse" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/tasks/browse/</strong> <strong>Endpoint:
+/project/&lt;short_name&gt;/tasks/browse/&lt;int:page&gt;</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<ul>
+<li><strong>n_completed_tasks</strong>: number of completed tasks</li>
+<li><strong>n_tasks</strong>: number of tasks</li>
+<li><strong>n_volunteers</strong>: number of volunteers</li>
+<li><strong>overall_progress</strong>: overall progress</li>
+<li><strong>owner</strong>: project owner</li>
+<li><strong>pagination</strong>: pagination information</li>
+<li><strong>pro_features</strong>: pro features enabled or not</li>
+<li><strong>project</strong>: project information</li>
+<li><strong>tasks</strong>: tasks, paginated</li>
+<li><strong>template</strong>: the Jinja2 template that should be rendered in case of
+    text/html.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-04-17T23:56:22.892222&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;3 hours ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pagination&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;per_page&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-04-17T23:56:23.416754&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Project&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;sampleapp&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-04-17T23:56:23.589652&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;tasks&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;pct_status&quot;</span><span class="p">:</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/tasks_browse.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Sample Project &amp;middot; Tasks&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-tasks-import">Project tasks import<a class="headerlink" href="#project-tasks-import" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/tasks/import</strong></p>
+<p><em>Allowed methods</em>: <strong>GET/POST</strong></p>
+<p><strong>GET</strong></p>
+<p>It returns a JSON object with the following information:</p>
+<ul>
+<li><strong>available_importers</strong>: A list of available importers for the
+    server. To use one of the items, you have to add to the endpoint the
+    following argument: <em>?type=name</em> where the name is the string that you will find in the list of importers in the format:
+    <em>projects/tasks/name.html</em>.</li>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: The title for the view.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;available_importers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;projects/tasks/epicollect.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/csv.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/s3.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/youtube.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/gdocs.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/dropbox.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/iiif.html&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;form&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;loading_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Importing tasks, this may take a while, wait...&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;confirmation_email_sent&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-06-06T06:27:18.760254&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoe@gmail.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">2414</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;4 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">2414</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">11134</span><span class="p">,</span>
+    <span class="nt">&quot;valid_email&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;contacted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;contrib_button&quot;</span><span class="p">:</span> <span class="s2">&quot;can_contribute&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-06-29T08:23:14.201331&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;old&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3117</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;passwd_hash&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;task_presenter&quot;</span><span class="p">:</span> <span class="nt">&quot;HTML+CSS+JS&quot;</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;avatar.png&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;algo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;n_blogposts&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;n_results&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;owner_id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;published&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-17T09:15:46.867215&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;project.import_task&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;task_tmpls&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;projects/tasks/gdocs-sound.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/gdocs-map.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/gdocs-image.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/gdocs-video.html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;projects/tasks/gdocs-pdf.html&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/task_import_options.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: bevan &amp;middot; Import Tasks&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Therefore, if you want to import tasks from a CSV link, you will have to
+do the following GET:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">GET server/project/&lt;short_name&gt;/tasks/import?type=csv</span>
+</code></pre></div>
+</td></tr></table>
+<p>That query will return the same output as before, but instead of the
+available_importers, you will get the the form fields and CSRF token
+for that importer.</p>
+<p><strong>POST</strong></p>
+<p>To send a valid POST request, you need to pass the <em>csrf token</em> in the headers. Use the following header: &ldquo;X-CSRFToken.&rdquo;</p>
+<p>It returns a JSON object with the following information:</p>
+<ul>
+<li><strong>flash</strong>: A success message, or error indicating if the request was
+    successful.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;flash&quot;</span><span class="p">:</span> <span class="s2">&quot;Tasks imported&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;/project/&lt;short_name&gt;/tasks/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-tutorial">Project tutorial<a class="headerlink" href="#project-tutorial" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/tutorial</strong></p>
+<p><strong>GET</strong></p>
+<p>It returns a JSON object with the following information:</p>
+<ul>
+<li><strong>owner</strong>: owner information</li>
+<li><strong>project</strong>: project information</li>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: The title for the view.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-13T15:28:08.420187&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;1410769844.15_avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_3927&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">43565</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;jdoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;3 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">43565</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-22T15:09:23.691811&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Image pattern recognition&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1377</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_3927&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;app_1377_thumbnail_1410772569.58.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail_url&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoeproject&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-02T21:00:33.965587&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/tutorial.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: myproject&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-shortname">Project shortname<a class="headerlink" href="#project-shortname" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Shows project information and owner information.</p>
+<p>If you are not the owner of the project or anonymous, then you will get only available public information for the owner and the project itself.</p>
+<ul>
+<li><strong>last_activity</strong>: Last activity on the project.</li>
+<li><strong>n_completed_tasks</strong>: Number of completed tasks.</li>
+<li><strong>n_task_runs</strong>: Number of task runs.</li>
+<li><strong>n_tasks</strong>: Number of tasks.</li>
+<li><strong>n_volunteers</strong>: Number of volunteers.</li>
+<li><strong>overall_progress</strong>: Overall progress.</li>
+<li><strong>owner</strong>: Owner user information.</li>
+<li><strong>pro_features</strong>: Enabled pro features for the project.</li>
+<li><strong>project</strong>: Project information</li>
+<li><strong>template</strong>: Jinja2 template.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<p>for logged in user JohnDoe:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T12:01:41.209270&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;akjhfd85-8afd6-48af-f7afg-kjhsfdlkjhf1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;confirmation_email_sent&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-08-11T08:59:32.079599&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;johndoe@johndoe.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_1234&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JohnDoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">1813</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;2 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">11093</span><span class="p">,</span>
+    <span class="nt">&quot;valid_email&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allow_anonymous_contributors&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;contacted&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;contrib_button&quot;</span><span class="p">:</span> <span class="s2">&quot;can_contribute&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T11:59:36.519541&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4567</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;task_presenter&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;div&gt; .... &quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;long_description&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678\r\n&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;n_blogposts&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;n_results&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;owner_id&quot;</span><span class="p">:</span> <span class="mi">9876</span><span class="p">,</span>
+    <span class="nt">&quot;published&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;veryverysecretkey&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-13T08:07:38.897626&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/project.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: flickr678&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Anonymous and other user output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T12:01:41.209270&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-08-11T08:59:32.079599&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_4953&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JohnDoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">1813</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;2 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">56</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T11:59:36.519541&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4567</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-13T08:07:38.897626&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/project.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: flickr678&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-settings">Project settings<a class="headerlink" href="#project-settings" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/settings</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Shows project information and owner information. Only works for
+authenticated users for their projects (or admins). Anonymous users
+will get a 302 to the login page. Logged in users with access rights will get a 403 when it&rsquo;s not their project.</p>
+<ul>
+<li><strong>last_activity</strong>: Last activity on the project.</li>
+<li><strong>n_completed_tasks</strong>: Number of completed tasks.</li>
+<li><strong>n_task_runs</strong>: Number of task runs.</li>
+<li><strong>n_tasks</strong>: Number of tasks.</li>
+<li><strong>n_volunteers</strong>: Number of volunteers.</li>
+<li><strong>overall_progress</strong>: Overall progress.</li>
+<li><strong>owner</strong>: Owner user information.</li>
+<li><strong>pro_features</strong>: Enabled pro features for the project.</li>
+<li><strong>project</strong>: Project information</li>
+<li><strong>template</strong>: Jinja2 template.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p>The example output matches <strong>/project/&lt;short_name&gt;/</strong></p>
+<h2 id="project-results">Project results<a class="headerlink" href="#project-results" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/results</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Shows information about a project results template. If the logged in
+user is the owner of the project you will get a more detailed owner
+information and project information.</p>
+<ul>
+<li><strong>last_activity</strong>: Last activity on the project.</li>
+<li><strong>n_completed_tasks</strong>: Number of completed tasks.</li>
+<li><strong>n_results</strong>: Number of results</li>
+<li><strong>n_task_runs</strong>: Number of task runs.</li>
+<li><strong>n_tasks</strong>: Number of tasks.</li>
+<li><strong>n_volunteers</strong>: Number of volunteers.</li>
+<li><strong>overall_progress</strong>: Overall progress.</li>
+<li><strong>owner</strong>: Owner user information.</li>
+<li><strong>pro_features</strong>: Enabled pro features for the project.</li>
+<li><strong>project</strong>: Project information</li>
+<li><strong>template</strong>: Jinja2 template for results</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<p>For an anonymous user or when you are not the project owner:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T12:01:41.209270&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_results&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-08-11T08:59:32.079599&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_4953&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JohnDoe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">1813</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;2 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">56</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T11:59:36.519541&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2417</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-13T08:07:38.897626&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/results.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: flickr678&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-stats">Project stats<a class="headerlink" href="#project-stats" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/stats</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Shows project statistics if available.</p>
+<p>If you are not the owner of the project or anonymous, then you will get only available public information for the owner and the project itself.</p>
+<ul>
+<li><strong>avg_contrib_time</strong>: Average contribution time (NOT existing when
+    no statistics there!).</li>
+<li><strong>projectStats</strong>: Project statistics (NOT existing when no
+    statistics there!).</li>
+<li><strong>userStats</strong>: User statistics (NOT existing when no statistics
+    there!).</li>
+<li><strong>n_completed_tasks</strong>: Number of completed tasks.</li>
+<li><strong>n_tasks</strong>: Number of tasks.</li>
+<li><strong>n_volunteers</strong>: Number of volunteers.</li>
+<li><strong>overall_progress</strong>: Progress (0..100).</li>
+<li><strong>owner</strong>: Owner user information</li>
+<li><strong>pro_features</strong>: Enabled pro features for the project.</li>
+<li><strong>project</strong>: Project information</li>
+<li><strong>template</strong>: Jinja2 template.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong> Statistics are existing in this output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;avg_contrib_time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-06-06T06:27:18.760254&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;Daniel Lombraña González&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;1422360933.8_avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_3&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">2998</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;teleyinex&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">66</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;4 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">2998</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;better_stats_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-01-10T19:58:55.454015&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Facial expressions that convey feelings&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">253</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;project_253_thumbnail_1460620575.png&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Face We Make&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;thefacewemake&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-14T07:56:16.114006&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;projectStats&quot;</span><span class="p">:</span> <span class="s2">&quot;{\&quot;userAuthStats\&quot;: {\&quot;top5\&quot;: [], \&quot;values\&quot;: [], \&quot;label\&quot;: \&quot;Authenticated Users\&quot;} ...&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/stats.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: The Face We Make &amp;middot; Statistics&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;userStats&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;anonymous&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;pct_taskruns&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;taskruns&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;top5&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="nt">&quot;users&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;authenticated&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;pct_taskruns&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;taskruns&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;top5&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="nt">&quot;users&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;geo&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-tasks">Project tasks<a class="headerlink" href="#project-tasks" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/tasks</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Shows project tasks.</p>
+<p>If you are not the owner of the project or anonymous, then you will get
+only available public information for the owner and the project itself.</p>
+<ul>
+<li><strong>autoimporter_enabled</strong>: If autoimporter is enabled.</li>
+<li><strong>last_activity</strong>: Last activity.</li>
+<li><strong>n_completed_tasks</strong>: Number of completed tasks.</li>
+<li><strong>n_task_runs</strong>: Number of task runs.</li>
+<li><strong>n_tasks</strong>: Number of tasks.</li>
+<li><strong>n_volunteers</strong>: Number of volunteers.</li>
+<li><strong>overall_progress</strong>: Progress (0..100).</li>
+<li><strong>owner</strong>: Owner user information</li>
+<li><strong>pro_features</strong>: Enabled pro features for the project.</li>
+<li><strong>project</strong>: Project information.</li>
+<li><strong>template</strong>: Jinja2 template.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<p>for another project where you are not the owner:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-02T21:00:33.627277&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;n_completed_tasks&quot;</span><span class="p">:</span> <span class="mi">184839</span><span class="p">,</span>
+  <span class="nt">&quot;n_task_runs&quot;</span><span class="p">:</span> <span class="mi">1282945</span><span class="p">,</span>
+  <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">193090</span><span class="p">,</span>
+  <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">20016</span><span class="p">,</span>
+  <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">95</span><span class="p">,</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-13T15:28:08.420187&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Smith&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;1410769844.15_avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_3927&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">43565</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pmisson&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;3 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">43565</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pro_features&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;auditlog_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;autoimporter_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;webhooks_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-22T15:09:23.691811&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Image pattern recognition&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1377</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_3927&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;app_1377_thumbnail_1410772569.58.png&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Cool Project&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;coolproject&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-02T21:00:33.965587&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/tasks.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Cool project&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-task-id">Project task id<a class="headerlink" href="#project-task-id" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/&lt;short_name&gt;/task/&lt;int:task_id&gt;</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Shows a project task based on id.</p>
+<p>If you are not the owner of the project or anonymous, then you will get
+only available public information for the owner and the project itself.</p>
+<ul>
+<li><strong>owner</strong>: Owner user information</li>
+<li><strong>project</strong>: Project information.</li>
+<li><strong>template</strong>: Jinja2 template of the task HTML template.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<p>for another project where you are not the owner:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-08-11T08:59:32.079599&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;1458638093.9_avatar.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;user_4953&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_answers&quot;</span><span class="p">:</span> <span class="mi">257</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JohnD&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">840</span><span class="p">,</span>
+    <span class="nt">&quot;registered_ago&quot;</span><span class="p">:</span> <span class="s2">&quot;2 years ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mi">257</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-21T11:59:36.519541&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;featured&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2417</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;flickr678&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-22T13:03:55.496660&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/presenter.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: flickr678 &amp;middot; Contribute&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="project-category">Project Category<a class="headerlink" href="#project-category" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/category/&lt;short_name&gt;/</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Gives you the list of projects in a category.</p>
+<ul>
+<li><strong>pagination</strong>: A pagination object for getting projects from this
+    category.</li>
+<li><strong>active_cat</strong>: Active category.</li>
+<li><strong>projects</strong>: List of projects belonging to this category.</li>
+<li><strong>categories</strong>: List of available categories in this server.</li>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;active_cat&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Social projects&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Social&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;social&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Featured projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Featured&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;featured&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Social projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Social&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;social&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-06-18T11:13:44.789149&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Art projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Art&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;art&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;pagination&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;per_page&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-22T15:09:23.691811&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Image pattern recognition&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1377</span><span class="p">,</span>
+      <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;58.png&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2 weeks ago&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.450391&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">169671</span><span class="p">,</span>
+      <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">17499</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+      <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.491496&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/index.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Projects&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To override the default ranking you pass the <strong>orderby</strong> query parameter to sort projects by any of the attributes listed above, such as  <em>n_volunteers</em> or <em>n_tasks</em>. The <strong>desc</strong> query parameter can also be added to sort in descending order. For example: GET
+/project/category/&lt;short_name&gt;/?orderby=n_tasks&amp;desc=True</p>
+</div>
+<h2 id="project-category-featured">Project Category Featured<a class="headerlink" href="#project-category-featured" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/category/featured/</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Gives you the list of featured projects.</p>
+<ul>
+<li><strong>pagination</strong>: A pagination object for getting new featured
+    projects from this category.</li>
+<li><strong>active_cat</strong>: Active category.</li>
+<li><strong>projects</strong>: List of projects belonging to this category.</li>
+<li><strong>categories</strong>: List of available categories in this server.</li>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;active_cat&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Featured projects&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Featured&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;featured&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Featured projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Featured&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;featured&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Social projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Social&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;social&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-06-18T11:13:44.789149&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Art projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Art&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;art&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;pagination&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;per_page&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-22T15:09:23.691811&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Image pattern recognition&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1377</span><span class="p">,</span>
+      <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;58.png&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2 weeks ago&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.450391&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">169671</span><span class="p">,</span>
+      <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">17499</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+      <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.491496&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/index.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Projects&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To override the default ranking, you pass the <strong>orderby</strong> query parameter to sort projects by any of the attributes listed above, such as <em>n_volunteers</em> or <em>n_tasks</em>. The <strong>desc</strong> query parameter can also be added to sort in descending order. For example: GET
+/project/category/featured/?orderby=n_tasks&amp;desc=True</p>
+</div>
+<h2 id="project-category-draft">Project Category Draft<a class="headerlink" href="#project-category-draft" title="Permanent link">&para;</a></h2>
+<p><strong>Endpoint: /project/category/draft/</strong></p>
+<p><em>Allowed methods</em>: <strong>GET</strong></p>
+<p><strong>GET</strong></p>
+<p>Gives you the list of featured projects.</p>
+<ul>
+<li><strong>pagination</strong>: A pagination object for getting new draft projets
+    from this category.</li>
+<li><strong>active_cat</strong>: Active category.</li>
+<li><strong>projects</strong>: List of projects belonging to this category.</li>
+<li><strong>categories</strong>: List of available categories in this server.</li>
+<li><strong>template</strong>: The Jinja2 template that could be rendered.</li>
+<li><strong>title</strong>: the title for the endpoint.</li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;active_cat&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Draft projects&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Draft&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;draft&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Draft projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Draft&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;draft&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Social projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Social&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;social&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-06-18T11:13:44.789149&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Art projects&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Art&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;art&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;pagination&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;per_page&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-02-22T15:09:23.691811&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Draft 1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+      <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;58.png&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;last_activity&quot;</span><span class="p">:</span> <span class="s2">&quot;2 weeks ago&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;last_activity_raw&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.450391&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;n_tasks&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;n_volunteers&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;overall_progress&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-31T09:18:28.491496&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;/projects/index.html&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Projects&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To override the default ranking, you pass the <strong>orderby</strong> query parameter to
+sort projects by any of the attributes listed above, such as
+<em>n_volunteers</em> or <em>n_tasks</em>. The <strong>desc</strong> query parameter can also be added to sort in descending order. For example: GET
+/project/category/draft/?orderby=n_tasks&amp;desc=True</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../statistics/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Statistics
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../task/favorites/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Favorites
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2013 - 2021: UCL, The British Museum, University of Cambridge, University of Stirling and SciFabric
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
