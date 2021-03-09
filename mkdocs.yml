@@ -1,13 +1,15 @@
-site_name: MicroPasts Crowdsourcing Documentation
-copyright: 'Copyright © 2013 - 2020: UCL, The British Museum, University of
+site_name: MicroPasts Documentation
+copyright: 'Copyright © 2013 - 2021: UCL, The British Museum, University of
 Cambridge, University of Stirling and SciFabric'
-
 theme:
   name: material
+  font:
+    text: Roboto
 markdown_extensions:
     - toc:
         permalink: True
     - admonition
+    - attr_list
     - smarty
     - wikilinks
     - codehilite:
@@ -30,11 +32,94 @@ markdown_extensions:
     - pymdownx.tilde
 nav:
   - Home: 'index.md'
+  - Setup:
+      - 'Introduction': 'setup/intro.md'
+      - 'Installation': 'setup/installing_pybossa.md'
+      - 'Plugins': 'setup/plugins.md'
+      - 'Importers': 'setup/importers.md'
+  - Installation:
+      - 'Getting started': 'installation/gettingstarted.md'
+      - 'Installing the server': 'installation/guide.md'
+      - 'Configuring PYBOSSA': 'installation/configuration.md'
+      - 'Deploying PYBOSSA with Nginx and uWsgi': 'installation/deployment.md'
+      - 'Administrating PYBOSSA': 'installation/admin.md'
+      - 'Testing PYBOSSA with Vagrant': 'installation/vagrant.md'
+      - 'Security': 'installation/security.md'
+      - Testing PYBOSSA with Vagrant: 'installation/vagrant.md'
+
+  - Building a project:
+      - 'Introduction': 'build/intro.md'
+      - 'Quickstart: Creating a project': 'build/overview.md'
+      - 'Using the command line': 'build/pbs.md'
+      - 'Tutorial': 'build/tutorial.md'
+      - 'Configuring the project': 'build/project_settings.md'
+      - 'Real time data analysis': 'build/webhooks.md'
+      - 'Data capturing: image, video or audio': 'build/capture.md'
+      - 'Domain model': 'build/model.md'
+  - Projects:
+      - 'Introduction': 'projects/introduction.md'
+      - 'Creating a new project': 'projects/creating-a-new-project.md'
+      - 'Creating a CUDL project': 'projects/cudl.md'
+  - Theme: 'theme/intro.md'
   - API:
       - 'Introduction': 'api/intro.md'
-extra:
-  palette:
-      primary: '#087da1'
-      accent: '#00a889'
-  font:
-      text: 'Source Sans Pro'
+      - 'Jamstack': 'api/jamstack.md'
+      - 'CRUD': 'api/crud.md'
+      - 'Full text search': 'api/fulltextsearch.md'
+      - 'Disqus Single Sign On': 'api/sso.md'
+      - 'Projects':
+          - 'RESTful API':
+             - 'Filtering data to several project IDs': 'api/project/filtering.md'
+             - 'Statistics': 'api/project/statistics.md'
+          - 'PYBOSSA endpoints':
+            - 'Options': 'api/project/project.md'
+      - 'Tasks':
+          - 'RESTful API':
+            - 'Favorites': 'api/task/favorites.md'
+            - 'Excluding contributed tasks': 'api/task/participated.md'
+            - 'Requesting a task': 'api/task/newtask.md'
+            - 'External user ID': 'api/task/external.md'
+      - 'TaskRuns':
+          - 'RESTful API':
+              - 'Attaching files': 'api/taskrun/intro.md'
+      - 'User':
+          - 'RESTful API':
+             - 'Intro': 'api/user/intro.md'
+             - 'Project progress': 'api/user/progress.md'
+          - 'PYBOSSA endpoints':
+             - 'Account': 'api/user/account.md'
+             - 'Admins': 'api/user/admin.md'
+      - 'Helping materials':
+          - 'RESTful API':
+              - 'Attaching files': 'api/helpingmaterial/intro.md'
+      - 'Pages':
+          - 'RESTful API':
+              - 'Info': 'api/page/intro.md'
+      - 'Blog posts':
+          - 'RESTful API':
+              - 'Attaching files': 'api/blogpost/intro.md'
+      - 'Leaderboard':
+         - 'PYBOSSA endpoints':
+             - 'Methods': 'api/leaderboard.md'
+      - 'Home page':
+         - 'PYBOSSA endpoints':
+             - Methods: 'api/home.md'
+      - 'Announcement':
+            - 'PYBOSSA endpoints':
+                - Methods: 'api/announcement.md'
+      - 'Categories':
+            - 'PYBOSSA endpoints':
+                - Methods: 'api/categories.md'
+      - 'Administration':
+         - 'PYBOSSA endpoints':
+            - 'Dashboard': 'api/admin/dashboard.md'
+            - 'Featured projects': 'api/admin/featured.md'
+      - 'Help':
+         - 'PYBOSSA endpoints':
+            - 'Methods': 'api/help.md'
+      - 'Server stats':
+         - 'PYBOSSA endpoints':
+            - Methods: 'api/stats.md'
+  - Github: 'github/intro.md'
+  - GDPR: 'gdpr.md'
+  - FAQ : 'faq.md'

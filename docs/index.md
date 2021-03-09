@@ -3,8 +3,17 @@
 This documentation site will cover how to create, deploy, maintain and retrieve
 data for citizen science projects based around Arts and Humanities subjects.
 
-The MicroPasts citizen science platform is built on Scifabric's Pybossa software
-and has been running since October 2013 (funded by the AHRC from 2013 - 2015.)
+Within this mkdocs instance, we have forked the original [Pybossa docs](https://github.com/Scifabric/pybossa) and
+embellished them for use with AWS EC2 and our installation methods and project creation.
+We stand on the shoulders of giants at SciFabric.
+
+![The MicroPasts Logo](/images/MP_SQUARE_notype.png){: align=left .img-fluid }
+
+The MicroPasts crowdsourcing platform was built as part of the MicroPasts project, funded by the UK Arts and Humanities Research Council and developed as a collaboration between the UCL Institute of Archaeology and the British Museum. The platform is now maintained by the main MicroPasts team (Andy Bevan, Daniel Pett, Chiara Bonacchi, Jennifer Wexler), together with other institutions, researchers and heritage professionals internationally.
+
+The MicroPasts crowdsourcing platform runs on the Pybossa framework developed by SciFabric. Templates have been created so far by the project team and by collaborators, by elaborating on and modifying some of the templates already available in Pybossa. The MicroPasts templates are modular, this means that they are adaptable to the needs of different collections and institutions. So far the kinds of tasks that are supported by the MicroPasts templates are: transcription of structured and unstructured text; geo-referencing of find spots; classification of photographic material; and 3D photo-masking.
+
+
 The framework we use (Pybossa), is described as:
 
 > PYBOSSA is a technology developed by Scifabric. It is used for the development of platforms and data collection within collaborative environments, analysis and data enrichment.
