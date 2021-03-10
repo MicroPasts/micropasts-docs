@@ -33,7 +33,6 @@ markdown_extensions:
 nav:
   - Home: 'index.md'
   - Setup:
-      - 'Introduction': 'setup/intro.md'
       - 'Installation': 'setup/installing_pybossa.md'
       - 'Plugins': 'setup/plugins.md'
       - 'Importers': 'setup/importers.md'
@@ -45,7 +44,7 @@ nav:
       - 'Administrating PYBOSSA': 'installation/admin.md'
       - 'Testing PYBOSSA with Vagrant': 'installation/vagrant.md'
       - 'Security': 'installation/security.md'
-      - Testing PYBOSSA with Vagrant: 'installation/vagrant.md'
+      - 'Testing PYBOSSA with Vagrant': 'installation/vagrant.md'
 
   - Building a project:
       - 'Introduction': 'build/intro.md'
