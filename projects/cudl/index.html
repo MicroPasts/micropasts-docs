@@ -639,6 +639,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#extracting-data" class="md-nav__link">
+    Extracting data
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1906,6 +1913,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#extracting-data" class="md-nav__link">
+    Extracting data
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1976,13 +1990,15 @@ in the snippets directory.</p>
 <p>Admin rights are required to access this page.</p>
 </div>
 <ol>
-<li>Go to <a href="https://crowdsourced.micropasts.org/project/new">https://crowdsourced.micropasts.org/project/new</a></li>
+<li>Go to <a href="https://crowdsourced.micropasts.org/project/new">https://crowdsourced.micropasts.org/project/new</a> and you will see this form:
+<img alt="Screenshot of create interface" src="../../images/create.png" /></li>
 <li>Fill in the following attributes</li>
 <li>Name for the project - eg. Rackham Great Waldingfield</li>
 <li>A short name for the project - eg rackham17865</li>
 <li>A long description of the project - what do you want to do? This is your
    first call to action - using markdown.</li>
-<li>Press create and you will be redirected to the update page</li>
+<li>Press create and you will be redirected to the update settings page, which will look like this:
+<img alt="Screenshot of create interface" src="../../images/settings.png" /></li>
 <li>Upload an image for the header and logo for the project.</li>
 <li>Press choose file</li>
 <li>Navigate to image file</li>
@@ -1991,17 +2007,16 @@ in the snippets directory.</p>
 <li>Select a project category, save and then don&rsquo;t touch anything else for now.</li>
 </ol>
 <h3 id="building-the-framework">Building the framework<a class="headerlink" href="#building-the-framework" title="Permanent link">&para;</a></h3>
-<p>This is super easy! We have a template project, a descriptive and visual intro
-and a data URI for import of tasks. So let&rsquo;s get going.</p>
+<p>This is super easy! We have a template project, a descriptive and visual intro and a data URI for import of tasks. So let&rsquo;s get going.</p>
 <h5 id="task-presenter">Task presenter<a class="headerlink" href="#task-presenter" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Click on tasks in the secondary nav menu</li>
 <li>Choose task presenter<ol>
-<li>Now you&rsquo;re in the interface to choose your project type. Scroll until you find:
-[CUDL IIIF projects] as a template</li>
+<li>Now you&rsquo;re in the interface to choose your project type. Scroll until you find: <strong>CUDL IIIF projects</strong> as a template
+<img alt="Template chooser" src="../../images/templates.png" /></li>
 <li>Press go</li>
-<li>This now renders the code for the interace - you can adapt this if you
-want to here, it is just HTML 5, css and javascript.</li>
+<li>This now renders the code for the interface - you can adapt this if you   want to here, it is just HTML 5, css and javascript.
+<img alt="Code interface" src="../../images/codeinterface.png" /></li>
 <li>Press update</li>
 </ol>
 </li>
@@ -2010,7 +2025,8 @@ want to here, it is just HTML 5, css and javascript.</li>
 <p>You now have a template project, but no data. Let&rsquo;s fix that!</p>
 <ol>
 <li>On the tasks page press the import tasks button</li>
-<li>Scroll down and look in the second columb for IIIF</li>
+<li>Scroll down and look in the second column for IIIF
+<img alt="Screenshot of importers" src="../../images/importers.png" /></li>
 <li>Paste a validated manifest URI into the url box eg <a href="https://fitz-cms-images.s3.eu-west-2.amazonaws.com/ms-cccc-00014-00006-00002-00001-00227.json">https://fitz-cms-images.s3.eu-west-2.amazonaws.com/ms-cccc-00014-00006-00002-00001-00227.json</a> in the box (choose presentation API 2.1)</li>
 <li>Press import</li>
 <li>Your project now has tasks!</li>
@@ -2018,7 +2034,8 @@ want to here, it is just HTML 5, css and javascript.</li>
 <h4 id="testing-and-publishing">Testing and publishing<a class="headerlink" href="#testing-and-publishing" title="Permanent link">&para;</a></h4>
 <p>You can now test the project via the &lsquo;Test it!&rsquo; button.</p>
 <ol>
-<li>Does a task appear?</li>
+<li>Does a task appear? You should see an interface like this:
+<img alt="Screenshot of interface" src="../../images/interface.png" /></li>
 <li>If it does, try and annotate the image by dragging and drawing</li>
 <li>Try and transcribe the text</li>
 <li>Submit your transcription.</li>
@@ -2035,6 +2052,141 @@ want to here, it is just HTML 5, css and javascript.</li>
 <p><strong>Ownership</strong>: You can share ownership of the project with other users, which allows you to administer
 the task settings and other options. To add a co-owner, go to settings &gt; coowners and search for the user you want to add.</p>
 <p><strong>Project report</strong>: To download a csv report for the project go to settings and export report.</p>
+<h3 id="extracting-data">Extracting data<a class="headerlink" href="#extracting-data" title="Permanent link">&para;</a></h3>
+<p>Like all MicroPasts projects, we tend to use scripting languages like Python or R to manipulate the data and redisplay or analyse. This uses the PYBOSSA API and export of user data to build your data analysis up. An example of how to do this:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#&#39; ----</span>
+<span class="c1">#&#39; title: &quot; A script for manipulation of the Montpelier crowdsourcing project</span>
+<span class="c1">#&#39; author: &quot;Daniel Pett&quot;</span>
+<span class="c1">#&#39; date: &quot;09/07/2016&quot;</span>
+<span class="c1">#&#39; output: csv_document</span>
+<span class="c1">#&#39; ----</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39;</span>
+
+<span class="c1"># Set the project name - When you change this to the project slug you choose which one to get</span>
+<span class="c1"># data for.</span>
+<span class="n">project</span> <span class="o">&lt;-</span> <span class="s">&#39;montpeliernailcatalogueproject&#39;</span>
+
+<span class="c1"># Create path string</span>
+<span class="n">pathToDir</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;~/Documents/research/micropasts/analysis/&quot;</span><span class="p">,</span><span class="n">project</span><span class="p">)</span>
+
+<span class="c1">#Check if this path exists, if not create it.</span>
+<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">file.exists</span><span class="p">(</span><span class="n">pathToDir</span><span class="p">)){</span>
+  <span class="nf">dir.create</span><span class="p">(</span><span class="n">pathToDir</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Set working directory (for example as below) This is for OSX. Change for your platform</span>
+<span class="nf">setwd</span><span class="p">(</span><span class="n">pathToDir</span><span class="p">)</span> <span class="c1">#MacOSX</span>
+
+<span class="c1"># Create CSV directory if does not exist</span>
+<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">file.exists</span><span class="p">(</span><span class="s">&#39;csv&#39;</span><span class="p">)){</span>
+  <span class="nf">dir.create</span><span class="p">(</span><span class="s">&#39;csv&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Create archives directory if does not exist</span>
+<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">file.exists</span><span class="p">(</span><span class="s">&#39;archives&#39;</span><span class="p">)){</span>
+  <span class="nf">dir.create</span><span class="p">(</span><span class="s">&#39;archives&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Create JSON folder</span>
+<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">file.exists</span><span class="p">(</span><span class="s">&#39;json&#39;</span><span class="p">)){</span>
+  <span class="nf">dir.create</span><span class="p">(</span><span class="s">&#39;json&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Add necessary libraries</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span>
+
+<span class="c1"># Load user data</span>
+<span class="c1"># http://crowdsourced.micropasts.org/admin/users/export?format=csv (when logged in as admin)</span>
+<span class="c1"># This saves as all_users.csv and put this in the csv folder</span>
+
+<span class="n">users</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;csv/all_users.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">users</span> <span class="o">&lt;-</span> <span class="n">users</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="s">&quot;fullname&quot;</span><span class="p">,</span><span class="s">&quot;name&quot;</span><span class="p">)]</span>
+
+
+
+<span class="c1"># Set the base url of the application</span>
+<span class="n">baseUrl</span> <span class="o">&lt;-</span> <span class="s">&#39;http://crowdsourced.micropasts.org/project/&#39;</span>
+
+<span class="c1"># Set the task runs api path</span>
+<span class="n">tasks</span> <span class="o">&lt;-</span> <span class="s">&#39;/tasks/export?type=task&amp;format=json&#39;</span>
+
+<span class="c1"># Form the export url</span>
+<span class="n">url</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">baseUrl</span><span class="p">,</span><span class="n">project</span><span class="p">,</span> <span class="n">tasks</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="n">archives</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#39;archives/&#39;</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="s">&#39;Tasks.zip&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Import tasks from json, this method has changed due to coding changes by SciFabric to their code</span>
+<span class="nf">download.file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">archives</span><span class="p">)</span>
+<span class="nf">unzip</span><span class="p">(</span><span class="n">archives</span><span class="p">)</span>
+<span class="n">taskPath</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#39;json/&#39;</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="s">&#39;.json&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="n">rename</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="s">&#39;_task.json&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="nf">file.rename</span><span class="p">(</span><span class="n">rename</span><span class="p">,</span> <span class="n">taskPath</span><span class="p">)</span>
+
+<span class="c1"># Read json files</span>
+<span class="nf">which</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="nf">readLines</span><span class="p">(</span><span class="n">taskPath</span><span class="p">),</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">tryCatch</span><span class="p">({</span><span class="n">jsonlite</span><span class="o">::</span><span class="nf">fromJSON</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="m">1</span><span class="p">},</span> <span class="n">error</span><span class="o">=</span><span class="nf">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="m">0</span><span class="p">))</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>
+<span class="n">trT</span> <span class="o">&lt;-</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="nf">readLines</span><span class="p">(</span><span class="n">taskPath</span><span class="p">),</span> <span class="n">collapse</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">))</span>
+<span class="n">trT</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">trT</span><span class="o">$</span><span class="n">id</span><span class="p">,</span><span class="n">trT</span><span class="o">$</span><span class="n">info</span><span class="p">)</span>
+<span class="n">trTfull</span> <span class="o">&lt;-</span> <span class="n">trT</span>
+
+<span class="c1"># extract just task id and image URL, title</span>
+<span class="n">trT</span> <span class="o">&lt;-</span> <span class="n">trT</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">)]</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">trT</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;taskID&quot;</span><span class="p">,</span><span class="s">&quot;pdfPath&quot;</span><span class="p">)</span>
+
+<span class="c1"># Import task runs from json</span>
+<span class="n">taskruns</span> <span class="o">&lt;-</span> <span class="s">&#39;/tasks/export?type=task_run&amp;format=json&#39;</span>
+<span class="n">urlRuns</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">baseUrl</span><span class="p">,</span><span class="n">project</span><span class="p">,</span> <span class="n">taskruns</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="n">archiveRuns</span> <span class="o">&lt;-</span><span class="nf">paste</span><span class="p">(</span><span class="s">&#39;archives/&#39;</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="s">&#39;TasksRun.zip&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="nf">download.file</span><span class="p">(</span><span class="n">urlRuns</span><span class="p">,</span><span class="n">archiveRuns</span><span class="p">)</span>
+<span class="nf">unzip</span><span class="p">(</span><span class="n">archiveRuns</span><span class="p">)</span>
+<span class="n">taskruns</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#39;json/&#39;</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="s">&#39;_task_run.json&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="n">renameRuns</span> <span class="o">&lt;-</span><span class="nf">paste</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="s">&#39;_task_run.json&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>   
+<span class="nf">file.rename</span><span class="p">(</span><span class="n">renameRuns</span><span class="p">,</span> <span class="n">taskruns</span><span class="p">)</span>
+
+<span class="c1"># Read the JSON</span>
+<span class="n">json</span> <span class="o">&lt;-</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="n">taskruns</span><span class="p">)</span>
+
+<span class="c1"># Read the transcription data</span>
+<span class="n">transcriptionEntry</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">info</span>
+<span class="n">resultsCount</span> <span class="o">&lt;-</span> <span class="nf">nrow</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">&lt;-</span> <span class="kc">NULL</span>
+<span class="c1"># Ignore first 3 entries as they were junk</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">a</span> <span class="n">in</span> <span class="m">3</span><span class="o">:</span><span class="n">resultsCount</span><span class="p">){</span>
+  <span class="n">test</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">json</span><span class="o">$</span><span class="n">info</span><span class="o">$</span><span class="n">table</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+  <span class="n">test</span><span class="o">$</span><span class="n">DEcode</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">info</span><span class="o">$</span><span class="n">deCode</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+  <span class="n">test</span><span class="o">$</span><span class="n">pageNumber</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">info</span><span class="o">$</span><span class="n">pageNumber</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+  <span class="n">test</span><span class="o">$</span><span class="n">siteNumber</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">info</span><span class="o">$</span><span class="n">siteNumber</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+  <span class="n">test</span><span class="o">$</span><span class="n">taskID</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">task_id</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+  <span class="n">test</span><span class="o">$</span><span class="n">userID</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">user_id</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+  <span class="c1">#remove the rubbish empty rows</span>
+  <span class="n">test</span> <span class="o">&lt;-</span> <span class="n">test</span><span class="p">[(</span><span class="m">1</span><span class="o">:</span><span class="m">24</span><span class="p">),]</span>
+  <span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1"># Enforced to UPPER</span>
+<span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">toupper</span><span class="p">))</span>
+
+<span class="c1"># Set up user details</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">users</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;userID&quot;</span><span class="p">,</span> <span class="s">&quot;fullname&quot;</span><span class="p">)</span>
+<span class="n">named</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">users</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;userID&quot;</span><span class="p">,</span> <span class="n">all.x</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1"># Merge for file paths to be added by line</span>
+<span class="n">named</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">named</span><span class="p">,</span> <span class="n">trT</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;taskID&quot;</span><span class="p">,</span> <span class="n">all.x</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1"># Here you label the column names that you want for your csv file header row</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">named</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;Inv #&#39;</span><span class="p">,</span> <span class="s">&#39;Cat #&#39;</span><span class="p">,</span> <span class="s">&#39;NCat Code&#39;</span><span class="p">,</span> <span class="s">&#39;Material Code&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;Condition code&#39;</span><span class="p">,</span> <span class="s">&#39;Artifact type&#39;</span><span class="p">,</span> <span class="s">&#39;Length in Inches&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;Width in inches&#39;</span><span class="p">,</span> <span class="s">&#39;Number&#39;</span><span class="p">,</span> <span class="s">&#39;Grams&#39;</span><span class="p">,</span> <span class="s">&#39;Notes&#39;</span><span class="p">,</span> <span class="s">&#39;Problem&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;DE code&#39;</span><span class="p">,</span> <span class="s">&#39;Page number&#39;</span><span class="p">,</span> <span class="s">&#39;Site number&#39;</span><span class="p">,</span> <span class="s">&#39;Fullname&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;username&#39;</span><span class="p">,</span> <span class="s">&#39;Path to file&#39;</span><span class="p">)</span>
+
+<span class="c1"># Tentative ordering</span>
+<span class="n">named</span> <span class="o">&lt;-</span> <span class="n">named</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">named</span><span class="p">[</span><span class="s">&#39;Cat #&#39;</span><span class="p">],</span> <span class="n">named</span><span class="p">[</span><span class="s">&#39;DE code&#39;</span><span class="p">]),]</span>
+
+<span class="c1"># Create a name and path for your csv file</span>
+<span class="n">csvname</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#39;csv/&#39;</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="s">&#39;.csv&#39;</span><span class="p">)</span>
+<span class="c1"># Write the csv file to your path</span>
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">named</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">csvname</span><span class="p">,</span> <span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
                 
               
               
