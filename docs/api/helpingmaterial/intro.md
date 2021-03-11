@@ -28,7 +28,7 @@ query the helping material endpoint to retrieve the example/tutorial
 materials for helping your users.
 
 !!! tip PBS and helping materials
-     You can use PBS to add helping materials from an Excel or CSV file. Check the [documentation](pbs.md#helping-materials).
+     You can use PBS to add helping materials from an Excel or CSV file. Check the [documentation](build/pbs.md#helping-materials).
 
-!!! note 
+!!! note
      Only project owners can create helping materials.

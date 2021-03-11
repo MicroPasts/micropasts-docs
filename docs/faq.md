@@ -2,7 +2,7 @@
 
 !!! info
     If you do not find your question in this section, please send it to us
-    directly to *info AT scfabric DOT com*. We will try to help you and
+    directly to *info AT scifabric DOT com*. We will try to help you and
     add your question to the FAQ.
 
 
@@ -57,7 +57,7 @@ Yes, you can. You will have to access the server, and then run the command
 
 .. note:
    By default, if you run this command it will return all the tasks,
-   task_runs, results and reset all the statistics for that project. 
+   task_runs, results and reset all the statistics for that project.
    BE CAREFUL.
 
 Pass ProjectID to delete everything, or tell the command to skip deleting

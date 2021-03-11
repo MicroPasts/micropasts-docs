@@ -1,6 +1,5 @@
-The University Library has a [Github based transcription](https://github.com/Cambridge-Digital-Library/Crowdsourcing/issues) exercise using its IIIF
-manifests and images of the [Oliver Rackham diaries](https://cudl.lib.cam.ac.uk/collections/rackham/1). A simple demo of how this could be done in MicroPasts was built in about 10 minutes during a CDH Methods Fellows
-Show and Tell.
+The University Library has a [Github based transcription](https://github.com/Cambridge-Digital-Library/Crowdsourcing/issues)
+exercise using its IIIF manifests and images of the [Oliver Rackham diaries](https://cudl.lib.cam.ac.uk/collections/rackham/1). A simple demo of how this could be done in MicroPasts was built in about 10 minutes during a CDH Methods Fellows Show and Tell.
 
 ### Pre-requisites for set up
 
@@ -62,6 +61,10 @@ Now you are registered and have access rights you are in the position to create
 an instance of a IIIF transcription and annotation project. The CUDL template
 source code for this project can be found in the [theme repository](https://github.com/MicroPasts/MicroPasts-pybossa-theme/blob/master/templates/projects/snippets/cudl.html)
 in the snippets directory.
+
+!!! question "How do I open this page?"
+
+    Admin rights are required to access this page.
 
 1. Go to https://crowdsourced.micropasts.org/project/new
 2. Fill in the following attributes
