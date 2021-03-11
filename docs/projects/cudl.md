@@ -66,13 +66,15 @@ in the snippets directory.
 
     Admin rights are required to access this page.
 
-1. Go to https://crowdsourced.micropasts.org/project/new
+1. Go to https://crowdsourced.micropasts.org/project/new and you will see this form:
+![Screenshot of create interface](../images/create.png)
 2. Fill in the following attributes
    1. Name for the project - eg. Rackham Great Waldingfield
    2. A short name for the project - eg rackham17865
    3. A long description of the project - what do you want to do? This is your
    first call to action - using markdown.
-3. Press create and you will be redirected to the update page
+3. Press create and you will be redirected to the update settings page, which will look like this:
+![Screenshot of create interface](../images/settings.png)
 4. Upload an image for the header and logo for the project.
    1. Press choose file
    2. Navigate to image file
@@ -82,18 +84,17 @@ in the snippets directory.
 
 ### Building the framework
 
-This is super easy! We have a template project, a descriptive and visual intro
-and a data URI for import of tasks. So let's get going.
+This is super easy! We have a template project, a descriptive and visual intro and a data URI for import of tasks. So let's get going.
 
 ##### Task presenter
 
 1. Click on tasks in the secondary nav menu
 2. Choose task presenter
-    1. Now you're in the interface to choose your project type. Scroll until you find:
-    [CUDL IIIF projects] as a template
+    1. Now you're in the interface to choose your project type. Scroll until you find: **CUDL IIIF projects** as a template
+    ![Template chooser](../images/templates.png)
     2. Press go
-    3. This now renders the code for the interace - you can adapt this if you
-    want to here, it is just HTML 5, css and javascript.
+    3. This now renders the code for the interface - you can adapt this if you   want to here, it is just HTML 5, css and javascript.
+    ![Code interface](../images/codeinterface.png)
     4. Press update
 
 ##### Basic tasks import
@@ -101,7 +102,8 @@ and a data URI for import of tasks. So let's get going.
 You now have a template project, but no data. Let's fix that!
 
 1. On the tasks page press the import tasks button
-2. Scroll down and look in the second columb for IIIF
+2. Scroll down and look in the second column for IIIF
+![Screenshot of importers](../images/importers.png)
 3. Paste a validated manifest URI into the url box eg https://fitz-cms-images.s3.eu-west-2.amazonaws.com/ms-cccc-00014-00006-00002-00001-00227.json in the box (choose presentation API 2.1)
 4. Press import
 5. Your project now has tasks!
@@ -110,7 +112,8 @@ You now have a template project, but no data. Let's fix that!
 
 You can now test the project via the 'Test it!' button.
 
-1. Does a task appear?
+1. Does a task appear? You should see an interface like this:
+![Screenshot of interface](../images/interface.png)
 2. If it does, try and annotate the image by dragging and drawing
 3. Try and transcribe the text
 4. Submit your transcription.
@@ -130,3 +133,143 @@ You now want to configure the task settings. This is based on the usual question
 the task settings and other options. To add a co-owner, go to settings > coowners and search for the user you want to add.
 
 **Project report**: To download a csv report for the project go to settings and export report.
+
+### Extracting data
+
+Like all MicroPasts projects, we tend to use scripting languages like Python or R to manipulate the data and redisplay or analyse. This uses the PYBOSSA API and export of user data to build your data analysis up. An example of how to do this:
+
+```R
+#' ----
+#' title: " A script for manipulation of the Montpelier crowdsourcing project
+#' author: "Daniel Pett"
+#' date: "09/07/2016"
+#' output: csv_document
+#' ----
+#'
+#'
+
+# Set the project name - When you change this to the project slug you choose which one to get
+# data for.
+project <- 'montpeliernailcatalogueproject'
+
+# Create path string
+pathToDir <- paste0("~/Documents/research/micropasts/analysis/",project)
+
+#Check if this path exists, if not create it.
+if (!file.exists(pathToDir)){
+  dir.create(pathToDir)
+}
+
+# Set working directory (for example as below) This is for OSX. Change for your platform
+setwd(pathToDir) #MacOSX
+
+# Create CSV directory if does not exist
+if (!file.exists('csv')){
+  dir.create('csv')
+}
+
+# Create archives directory if does not exist
+if (!file.exists('archives')){
+  dir.create('archives')
+}
+
+# Create JSON folder
+if (!file.exists('json')){
+  dir.create('json')
+}
+
+# Add necessary libraries
+library(jsonlite)
+library(stringr)
+
+# Load user data
+# http://crowdsourced.micropasts.org/admin/users/export?format=csv (when logged in as admin)
+# This saves as all_users.csv and put this in the csv folder
+
+users <- read.csv('csv/all_users.csv', header=TRUE)
+users <- users[,c("id","fullname","name")]
+
+
+
+# Set the base url of the application
+baseUrl <- 'http://crowdsourced.micropasts.org/project/'
+
+# Set the task runs api path
+tasks <- '/tasks/export?type=task&format=json'
+
+# Form the export url
+url <- paste(baseUrl,project, tasks, sep='')
+archives <- paste('archives/',project,'Tasks.zip', sep='')
+
+# Import tasks from json, this method has changed due to coding changes by SciFabric to their code
+download.file(url,archives)
+unzip(archives)
+taskPath <- paste('json/', project, '.json', sep='')
+rename <- paste(project, '_task.json', sep='')
+file.rename(rename, taskPath)
+
+# Read json files
+which(lapply(readLines(taskPath), function(x) tryCatch({jsonlite::fromJSON(x); 1}, error=function(e) 0)) == 0)
+trT <- fromJSON(paste(readLines(taskPath), collapse=""))
+trT <- cbind(trT$id,trT$info)
+trTfull <- trT
+
+# extract just task id and image URL, title
+trT <- trT[,c(1,2)]
+names(trT) <- c("taskID","pdfPath")
+
+# Import task runs from json
+taskruns <- '/tasks/export?type=task_run&format=json'
+urlRuns <- paste(baseUrl,project, taskruns, sep='')
+archiveRuns <-paste('archives/', project, 'TasksRun.zip', sep='')
+download.file(urlRuns,archiveRuns)
+unzip(archiveRuns)
+taskruns <- paste('json/', project, '_task_run.json', sep='')
+renameRuns <-paste(project, '_task_run.json', sep='')   
+file.rename(renameRuns, taskruns)
+
+# Read the JSON
+json <- fromJSON(taskruns)
+
+# Read the transcription data
+transcriptionEntry <- json$info
+resultsCount <- nrow(json)
+data <- NULL
+# Ignore first 3 entries as they were junk
+for (a in 3:resultsCount){
+  test <- as.data.frame(json$info$table[a])
+  test$DEcode <- json$info$deCode[a]
+  test$pageNumber <- json$info$pageNumber[a]
+  test$siteNumber <- json$info$siteNumber[a]
+  test$taskID <- json$task_id[a]
+  test$userID <- json$user_id[a]
+  #remove the rubbish empty rows
+  test <- test[(1:24),]
+  data <- rbind(data, test)
+}
+# Enforced to UPPER
+data <- as.data.frame(sapply(data, toupper))
+
+# Set up user details
+names(users) <- c("userID", "fullname")
+named <- merge(data, users, by="userID", all.x=FALSE)
+
+# Merge for file paths to be added by line
+named <- merge(named, trT, by="taskID", all.x=FALSE)
+
+# Here you label the column names that you want for your csv file header row
+colnames(named) <- c('Inv #', 'Cat #', 'NCat Code', 'Material Code',
+                     'Condition code', 'Artifact type', 'Length in Inches',
+                     'Width in inches', 'Number', 'Grams', 'Notes', 'Problem',
+                     'DE code', 'Page number', 'Site number', 'Fullname',
+                     'username', 'Path to file')
+
+# Tentative ordering
+named <- named[order(named['Cat #'], named['DE code']),]
+
+# Create a name and path for your csv file
+csvname <- paste0('csv/', project, '.csv')
+# Write the csv file to your path
+write.csv(named, file=csvname, row.names=FALSE, na="")
+
+```
