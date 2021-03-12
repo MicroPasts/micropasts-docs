@@ -277,7 +277,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nstallation/faq.md" class="md-nav__link">
+    <a href="../../installation/faq/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -1998,11 +1998,11 @@
 <h2 id="pbs">PBS<a class="headerlink" href="#pbs" title="Permanent link">&para;</a></h2>
 <p><strong>PBS</strong> is a simple command line interface to a PYBOSSA server. The command allows you to:</p>
 <ul>
-<li>create projects, </li>
-<li>add tasks from a CSV, Excel or JSON file, </li>
+<li>create projects,</li>
+<li>add tasks from a CSV, Excel or JSON file,</li>
 <li>show progress when adding tasks</li>
 <li>delete tasks,</li>
-<li>updated redundancy for tasks, </li>
+<li>updated redundancy for tasks,</li>
 <li>and update the project templates.</li>
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
@@ -2017,7 +2017,7 @@
 <h2 id="configuring-pbs">Configuring PBS<a class="headerlink" href="#configuring-pbs" title="Permanent link">&para;</a></h2>
 <p>By default, PBS does not need a config file. However, you will have to specify for every command the server and your API key to add tasks, create a project, etc. For determining the server and API key
 that you want to use, all you have to do is pass it as an argument:</p>
-<div class="highlight"><pre><span></span><code>pbs --server http://server.com --api-key yourkey subcommand
+<div class="highlight"><pre><span></span><code>pbs --server https://crowdsourced.MicroPasts.org --api-key yourkey subcommand
 </code></pre></div>
 <p>If you work with two or more servers, then, remembering all the keys, and server URLs could be problematic, as well as you will be leaving a trace in your BASH history file. For this reason, pbs has a
 configuration file where you can add all the servers that you are
@@ -2088,7 +2088,7 @@ available options, please check the <strong>&ndash;help</strong> command:</p>
 <p>To use this solution, just transpile to a file named bundle.js or bundle.min.js.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If there&rsquo;s a minified version of the file, bundle.min.js, that file will always be used instead of bundle.js. </p>
+<p>If there&rsquo;s a minified version of the file, bundle.min.js, that file will always be used instead of bundle.js.</p>
 </div>
 <h3 id="auto-updating-while-developing-a-pybossa-project">Auto-updating while developing a PYBOSSA project<a class="headerlink" href="#auto-updating-while-developing-a-pybossa-project" title="Permanent link">&para;</a></h3>
 <p>At some point, you will end up running lots of PBS update_project commands, as you will be using your chosen editor for fixing CSS, HTML or JavaScript. For these scenarios, PBS comes with a handy flag: <strong>&ndash;watch</strong>. This argument will tell PBS to run the update_project command automatically when bundle.js, bundle.min.js, template.html, tutorial.html or long_description.md are modified in the file system. As simple as that.</p>
@@ -2119,7 +2119,7 @@ available options, please check the <strong>&ndash;help</strong> command:</p>
 <strong>&ndash;help</strong> command:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>By default, PYBOSSA servers use a rate limit for avoiding abuse of the API. For this reason, you can only do usually 300 requests per every 15 minutes. If you are going to add more than 300 tasks, pbs will detect it and warn you, auto-enabling the throttling for you to respect the limits. Please, see <a href="api.md#rate-limiting">the rate-limiting section</a> for more details.</p>
+<p>By default, PYBOSSA servers use a rate limit for avoiding abuse of the API. For this reason, you can only do usually 300 requests per every 15 minutes. If you are going to add more than 300 tasks, pbs will detect it and warn you, auto-enabling the throttling for you to respect the limits. Please, see <a href="../../api/intro/#rate-limiting">the rate-limiting section</a> for more details.</p>
 </div>
 <div class="highlight"><pre><span></span><code>pbs add_tasks --help
 </code></pre></div>

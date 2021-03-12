@@ -745,19 +745,6 @@
     Forums
   </a>
   
-    <nav class="md-nav" aria-label="Forums">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#disqus-single-sign-on-sso" class="md-nav__link">
-    Disqus Single Sign-On (SSO)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1021,7 +1008,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nstallation/faq.md" class="md-nav__link">
+    <a href="../faq/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -2941,19 +2928,6 @@
     Forums
   </a>
   
-    <nav class="md-nav" aria-label="Forums">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#disqus-single-sign-on-sso" class="md-nav__link">
-    Disqus Single Sign-On (SSO)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3735,19 +3709,6 @@ a 404 if you add a trailing slash to it:</p>
 <p>To disable this behavior, enable the STRICT_SLASHES option and set it to False. That option will ensure that both endpoints work with and without the trailing slash.</p>
 <h2 id="forums">Forums<a class="headerlink" href="#forums" title="Permanent link">&para;</a></h2>
 <p>PYBOSSA does not provide its own forum. However, you can use Disqus and integrate it in your PYBOSSA server.</p>
-<h3 id="disqus-single-sign-on-sso">Disqus Single Sign-On (SSO)<a class="headerlink" href="#disqus-single-sign-on-sso" title="Permanent link">&para;</a></h3>
-<p>PYBOSSA supports Disqus SSO. However, it is disabled by default. You need to register a Disqus application (see their <a href="https://help.disqus.com/customer/portal/articles/236206">documentation</a>) and then update your settings_local.py file with the following two keys:</p>
-<div class="highlight"><pre><span></span><code><span class="n">DISQUS_SECRET_KEY</span> <span class="o">=</span> <span class="s1">&#39;secret&#39;</span>
-<span class="n">DISQUS_PUBLIC_KEY</span> <span class="o">=</span> <span class="s1">&#39;publickey&#39;</span>
-</code></pre></div>
-<p>Then, this will enable you to use a new Jinja2 filter for  authenticating PYBOSSA users directly in their Disqus server. The filter is <em>disqus_sso</em>. You can use it like this:</p>
-<div class="highlight"><pre><span></span><code>{% if current_user.is_authenticated() %}
-{{ current_user | disqus_sso | safe }}
-{% else %}
-{{ None | disqus_sso | safe }}
-{% endif %}
-</code></pre></div>
-<p>Also, if you are building a Single Page Application, you can use our API endpoint: <em>api/disqus/sso</em> to get the credentials and authenticate the users within your javascript. Check the <a href="../build/api.md#disqus-single-sign-on-sso">endpoint information Disqus-API</a>.</p>
 <h2 id="background-jobs-timeout">Background jobs timeout<a class="headerlink" href="#background-jobs-timeout" title="Permanent link">&para;</a></h2>
 <p>By default PYBOSSA timeout for every job is 10 minutes. In principle, it should be fine, but each project and server is unique, so if you start
 seeing too many jobs failing because the job timed out, then, increase the value using these config variables:</p>

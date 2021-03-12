@@ -277,7 +277,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nstallation/faq.md" class="md-nav__link">
+    <a href="../../installation/faq/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -2359,7 +2359,7 @@ to your project, you can set a password. Thus, every time a user (either anonymo
 <p>Now that we have the project created, we can add some tasks to it. PYBOSSA will deliver the tasks for the users (authenticated and
 anonymous ones) and store the submitted answers in the PYBOSSA database so that you can process them in a later stage.</p>
 <p>A PYBOSSA task is a JSON object with the information that needs to be processed by the volunteers. Usually, it will be a link to a media file (image, video, sound clip, PDF file, etc.) that needs to be processed.</p>
-<p><strong>PYBOSSA does not store any data; it only links data in the tasks</strong>. This feature is really cool as you will always have control of the data. </p>
+<p><strong>PYBOSSA does not store any data; it only links data in the tasks</strong>. This feature is really cool as you will always have control of the data.</p>
 <p>While PYBOSSA internally uses JSON for storing the data, you can add  tasks to your project using several formats:</p>
 <ul>
 <li>CSV: a comma-separated spreadsheet-</li>
@@ -2392,7 +2392,7 @@ contact Flickr, get the latest published photos to this web service, and
 save them in JSON format as a file (flickr_tasks.json), with the same
 structure as the CSV file (the keys are the same):</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="s1">&#39;link&#39;</span><span class="o">:</span> <span class="s1">&#39;http://www.flickr.com/photos/teleyinex/2945647308/&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;url_m&#39;</span><span class="o">:</span> <span class="s1">&#39;http://farm4.staticflickr.com/3208/2945647308_f048cc1633_m.jpg&#39;</span><span class="p">,</span> 
+  <span class="s1">&#39;url_m&#39;</span><span class="o">:</span> <span class="s1">&#39;http://farm4.staticflickr.com/3208/2945647308_f048cc1633_m.jpg&#39;</span><span class="p">,</span>
   <span class="s1">&#39;url_b&#39;</span><span class="o">:</span> <span class="s1">&#39;http://farm4.staticflickr.com/3208/2945647308_f048cc1633_b.jpg&#39;</span> <span class="p">}</span>
 </code></pre></div>
 <div class="admonition note">
@@ -2414,11 +2414,11 @@ you know when all the tasks have been added to your project. This has been reall
 <p>Done! Again, a progress bar will show us how long it takes to add all
 the tasks. Now that we have all the tasks in the project, we can work on the next step: presenting the tasks to the volunteers.</p>
 <h3 id="tasks-redundancy">Task&rsquo;s redundancy<a class="headerlink" href="#tasks-redundancy" title="Permanent link">&para;</a></h3>
-<p>PYBOSSA by default will send a task to different users (authenticated 
+<p>PYBOSSA by default will send a task to different users (authenticated
 and anonymous users) until 30 different task runs are obtained for each task. This is usually known as <strong>redundancy</strong>, and we will use it to validate the analysis of the task. The whole aim of this value is to avoid trolls to participate several times in the same task, answering wrong on purpose so that we can have a valid statistical analysis of the submitted contributions by the volunteers.</p>
 <p>PYBOSSA does not allow the same user to submit more than one
 answer (task runs in PYBOSSA lingo) to the same task. PYBOSSA identifies anonymous users via their IP, while registered users via their PYBOSSA id.</p>
-<p>Why PYBOSSA uses a default value of 30? Well, because we are getting 30 observations for a task, and if the data is normal, at least 30 samples should be obtained to get that model. In any case, you can easily change this value for each, using the task settings section of your project (or via the API using the <a href="../pbs/#updating-tasks-redundancy-from-a-project">pbs</a> tool). </p>
+<p>Why PYBOSSA uses a default value of 30? Well, because we are getting 30 observations for a task, and if the data is normal, at least 30 samples should be obtained to get that model. In any case, you can easily change this value for each, using the task settings section of your project (or via the API using the <a href="../pbs/#updating-tasks-redundancy-from-a-project">pbs</a> tool).</p>
 <p>If you want to improve the quality of the results for one task and get more confidence in the data when you will analyze it, you can modify the redundancy value with the pbs command. For example, to reduce the number of users that will analyze each task to ten, run the following command:</p>
 <div class="highlight"><pre><span></span><code>pbs add_tasks --tasks-file file --redundancy <span class="m">10</span>
 </code></pre></div>
@@ -2482,7 +2482,7 @@ JavaScript functions to get a task from the PYBOSSA server and populate it in th
 beginning you will find a big div that will be used to show some
 messages to the user about the success of an action, for instance, that an answer has been saved or that a new task is being loaded. Take a look:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-  <span class="c">&lt;!-- Success and Error Messages for the user --&gt;</span> 
+  <span class="c">&lt;!-- Success and Error Messages for the user --&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span6 offset2&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height:50px&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;success&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert alert-success&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display:none;&quot;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;close&quot;</span><span class="p">&gt;</span>×<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -2540,7 +2540,7 @@ can have 12 columns), so we will populate a structure like this:</p>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;progress&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;tooltip&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bar&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 0%;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="c">&lt;!-- </span>
+    <span class="c">&lt;!--</span>
 <span class="c">        This project uses Disqus to allow users to provide some feedback.</span>
 <span class="c">        The next section includes a button that when a user clicks on it will</span>
 <span class="c">        load the comments, if any, for the given task</span>
@@ -2583,7 +2583,7 @@ task is getting loaded.</p>
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;progress&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;tooltip&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bar&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 0%;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="c">&lt;!-- </span>
+        <span class="c">&lt;!--</span>
 <span class="c">            This project uses Disqus to allow users to provide some feedback.</span>
 <span class="c">            The next section includes a button that when a user clicks on it will</span>
 <span class="c">            load the comments, if any, for the given task</span>
@@ -2637,14 +2637,14 @@ the current user can be pre-loaded. The code is the following:</p>
 </code></pre></div>
 <p>The <strong>pybossa.presentTask</strong> method will be called when a task has been obtained from the server:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="nx">question</span><span class="o">:</span> <span class="nx">project</span><span class="p">.</span><span class="nx">description</span><span class="p">,</span>
-  <span class="nx">task</span><span class="o">:</span> <span class="p">{</span> 
+  <span class="nx">task</span><span class="o">:</span> <span class="p">{</span>
           <span class="nx">id</span><span class="o">:</span> <span class="nx">value</span><span class="p">,</span>
           <span class="p">...,</span>
-          <span class="nx">info</span><span class="o">:</span> <span class="p">{</span> 
-                  <span class="nx">url_m</span><span class="o">:</span> 
+          <span class="nx">info</span><span class="o">:</span> <span class="p">{</span>
+                  <span class="nx">url_m</span><span class="o">:</span>
                   <span class="nx">link</span><span class="o">:</span>
-                 <span class="p">}</span> 
-        <span class="p">}</span> 
+                 <span class="p">}</span>
+        <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>That JSON object will be accessible via the task object passed as an
@@ -2717,7 +2717,7 @@ the progress of the user and update the progress bar accordingly:</p>
         <span class="kd">var</span> <span class="nx">pct</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">((</span><span class="nx">data</span><span class="p">.</span><span class="nx">done</span><span class="o">*</span><span class="mf">100</span><span class="p">)</span><span class="o">/</span><span class="nx">data</span><span class="p">.</span><span class="nx">total</span><span class="p">);</span>
         <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#progress&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="nx">pct</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span><span class="s2">&quot;%&quot;</span><span class="p">);</span>
         <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#progress&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="nx">pct</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;% completed!&quot;</span><span class="p">);</span>
-        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#progress&quot;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span><span class="s1">&#39;placement&#39;</span><span class="o">:</span> <span class="s1">&#39;left&#39;</span><span class="p">});</span> 
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#progress&quot;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span><span class="s1">&#39;placement&#39;</span><span class="o">:</span> <span class="s1">&#39;left&#39;</span><span class="p">});</span>
         <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#total&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">total</span><span class="p">);</span>
         <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#done&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">done</span><span class="p">);</span>
     <span class="p">});</span>
@@ -2740,7 +2740,7 @@ the PYBOSSA.JS library. In this case:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">pybossa</span><span class="p">.</span><span class="nx">saveTask</span><span class="p">(</span> <span class="nx">taskid</span><span class="p">,</span> <span class="nx">answer</span> <span class="p">).</span><span class="nx">done</span><span class="p">(</span>
   <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
       <span class="c1">// Show the feedback div</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#success&quot;</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">();</span> 
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#success&quot;</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">();</span>
       <span class="c1">// Fade out the pop-up after a 1000 miliseconds</span>
       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#success&quot;</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">()</span> <span class="p">},</span> <span class="mf">1000</span><span class="p">);</span>
   <span class="p">};</span>
@@ -2766,8 +2766,8 @@ you only have to modify the file <em>template.html</em> and run the following co
 <p>The presenter will load one task, and you will be able to submit and
 save one answer for the current task.</p>
 <h2 id="publishing-the-project">Publishing the project<a class="headerlink" href="#publishing-the-project" title="Permanent link">&para;</a></h2>
-<p>Until now, the project has been in testing mode. This means that you can play with your project as much as you want. You can invite a few friends or colleauges to test it, just to know that everything works. </p>
-<p>In this mode PYBOSSA will work as a published project, so you can test it, however, it is not published so it&rsquo;s not visible to users on the server unless you share the link to it. </p>
+<p>Until now, the project has been in testing mode. This means that you can play with your project as much as you want. You can invite a few friends or colleauges to test it, just to know that everything works.</p>
+<p>In this mode PYBOSSA will work as a published project, so you can test it, however, it is not published so it&rsquo;s not visible to users on the server unless you share the link to it.</p>
 <p>Once you are happy, you can publish the project. When you publish the project, PYBOSSA will clean your tests and leave it clean for your contributors. Thus, don&rsquo;t be afraid and test as much as you want!</p>
 <h2 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h2>
 <p>In general, users will like to have some feedback when accessing for the very first time your project. Usually, the overview page of your project will not be enough, so you can build a tutorial (a web page) that will explain to the volunteer how he can participate in the
@@ -2944,7 +2944,7 @@ only the tutorial that fits his locale settings is shown.</p>
 <h3 id="another-method-to-support-i18n">Another method to support I18n<a class="headerlink" href="#another-method-to-support-i18n" title="Permanent link">&para;</a></h3>
 <p>Another option for translating your project to different languages is
 using a JSON object like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">messages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;en&quot;</span><span class="o">:</span> 
+<div class="highlight"><pre><span></span><code><span class="nx">messages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;en&quot;</span><span class="o">:</span>
                <span class="p">{</span><span class="s2">&quot;welcome&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello World!,</span>
 <span class="s2">                &quot;</span><span class="nx">bye</span><span class="s2">&quot;: &quot;</span><span class="nx">Good</span> <span class="nx">bye</span><span class="o">!</span><span class="s2">&quot;</span>
 <span class="s2">               },</span>
@@ -3088,7 +3088,7 @@ completed using this URL:</p>
 </td></tr></table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If your project has more than 20 tasks, then you will need to use the <a href="api.md#list">API pagination</a>, as by default PYBOSSA API only returns the first 20 items.</p>
+<p>If your project has more than 20 tasks, then you will need to use the <a href="../../api/intro/#list">API pagination</a>, as by default PYBOSSA API only returns the first 20 items.</p>
 </div>
 <p>Once you have obtained the list of completed tasks, your script could
 start requesting the collected answers for the given tasks:</p>
@@ -3155,7 +3155,7 @@ maps, WebGL, etc.</p>
 <p>The error message will have the information regarding the problems it has found when using the API.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Since version 2.0.1 PYBOSSA enforces API Rate Limiting, so you might exceed the number of allowed requests, getting a 429 error. Please see <a href="api.md#rate-limiting">rate-limiting section</a>.</p>
+<p>Since version 2.0.1 PYBOSSA enforces API Rate Limiting, so you might exceed the number of allowed requests, getting a 429 error. Please see <a href="../../api/intro/#rate-limiting">rate-limiting section</a>.</p>
 </div>
                 
               
