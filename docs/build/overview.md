@@ -68,7 +68,7 @@ basic information needed to create your project:
 
 !!! note
     PYBOSSA usually provides two Project Categories by default: *prehistory* is the default.
-    
+
 
 Once you have filled all the fields, click in the **Create the project** button, and you will have created your first project :thumbsup:
 
@@ -460,7 +460,7 @@ Creating a project using the API involves these steps:
 
 ### Creating the project
 
-You can create a project via the API URL **/api/project** with a POST request (See [api](api.md)).
+You can create a project via the API URL **/api/project** with a POST request (See [api](../api/intro.md)).
 
 You have to provide the following information about the project and
 convert it to a JSON object (the actual values are taken from the

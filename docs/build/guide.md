@@ -13,6 +13,6 @@ The following sections have some useful information to get you started:
  - [Using PYBOSSA from the command line](pbs.md)
  - [Step by step tutorial about PYBOSSA](tutorial.md)
  - [Configuring the project](project_settings.md)
- - [PYBOSSA API](api.md)
+ - [PYBOSSA API](../api)
  - [Domain model](model.md)
  - [Real time data analysis](webhooks.md)

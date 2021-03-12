@@ -7,7 +7,7 @@ server.
 
 - [Testing PYBOSSA with Vagrant](vagrant.md)
 - [Installing PYBOSSA by hand](installing_pybossa.md)
-- [Deploying PYBOSSA with nginx and uwsgi](nginx.md)
+- [Deploying PYBOSSA with nginx and uwsgi](installation/deployment/#installing-nginx-and-uwsgi)
 - [Configuring PYBOSSA](configuration.md)
 - [Administrating PYBOSSA](admin.md)
 - [Writing plugins for a PYBOSSA server](plugins.md)

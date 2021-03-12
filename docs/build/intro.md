@@ -64,7 +64,7 @@ Creating a project is simple. You fill in some data via the web interface, and t
 !!! tip
      If you need an importer, please, add a [Github Issue](https://github.com/Scifabric/pybossa) in our repository so we can implement it.
 
-While these importers solve most of the problems, in some scenarios you will need to import data into your PYBOSSA project in a different way. For these cases, we recommend you to use our command line tool [pbs](pbs.md) or just write a script that will talk directly to the PYBOSSA [API](api.md).
+While these importers solve most of the problems, in some scenarios you will need to import data into your PYBOSSA project in a different way. For these cases, we recommend you to use our command line tool [pbs](../build/pbs.md) or just write a script that will talk directly to the PYBOSSA [API](../api/intro.md).
 
 Scifabric provides several PYBOSSA project templates that can be re-used for creating new projects easily:
 
@@ -100,5 +100,3 @@ Scifabric provides several template projects that can be re-used to create your 
   transcription template.
 
 The template projects provide the task presenter, where you can learn how to use it. We recommend you to read the [tutorial](tutorial.md) as it gives *a step by step* guide about how you can create a project, write the Task Creator and Presenter from scratch using the [Flickr Person Finder](https://github.com/Scifabric/app-flickrperson) template project.
-
-

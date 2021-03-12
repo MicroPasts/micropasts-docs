@@ -836,27 +836,6 @@ To disable this behavior, enable the STRICT_SLASHES option and set it to False. 
 
 PYBOSSA does not provide its own forum. However, you can use Disqus and integrate it in your PYBOSSA server.
 
-### Disqus Single Sign-On (SSO)
-
-PYBOSSA supports Disqus SSO. However, it is disabled by default. You need to register a Disqus application (see their [documentation](https://help.disqus.com/customer/portal/articles/236206)) and then update your settings_local.py file with the following two keys:
-
-``` python
-DISQUS_SECRET_KEY = 'secret'
-DISQUS_PUBLIC_KEY = 'publickey'
-```
-
-Then, this will enable you to use a new Jinja2 filter for  authenticating PYBOSSA users directly in their Disqus server. The filter is *disqus_sso*. You can use it like this:
-
-``` jinja2
-{% if current_user.is_authenticated() %}
-{{ current_user | disqus_sso | safe }}
-{% else %}
-{{ None | disqus_sso | safe }}
-{% endif %}
-```
-
-Also, if you are building a Single Page Application, you can use our API endpoint: *api/disqus/sso* to get the credentials and authenticate the users within your javascript. Check the [endpoint information Disqus-API](../build/api.md#disqus-single-sign-on-sso).
-
 ## Background jobs timeout
 
 By default PYBOSSA timeout for every job is 10 minutes. In principle, it should be fine, but each project and server is unique, so if you start

@@ -40,7 +40,7 @@ nav:
       - 'Administering PYBOSSA': 'installation/admin.md'
       - 'Testing PYBOSSA with Vagrant': 'installation/vagrant.md'
       - 'Security': 'installation/security.md'
-      - 'FAQ' : 'nstallation/faq.md'
+      - 'FAQ': 'installation/faq.md'
   - MicroPasts PYBOSSA Theme: 'theme/intro.md'
   - Building a project:
       - 'Introduction': 'build/intro.md'

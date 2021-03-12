@@ -25,7 +25,7 @@ This **API-KEY** will identify and authenticate you via the PYBOSSA API. It will
 
 !!! note
     This tutorial uses the [pbs command line tool](pbs.md). You need to install it in your system before proceeding. Please, check the [pbs documentation for more information](pbs.md).
-   
+
 ## Creating the Project
 
 There are two possible methods for creating a project:
@@ -150,7 +150,7 @@ anonymous ones) and store the submitted answers in the PYBOSSA database so that 
 
 A PYBOSSA task is a JSON object with the information that needs to be processed by the volunteers. Usually, it will be a link to a media file (image, video, sound clip, PDF file, etc.) that needs to be processed.
 
-**PYBOSSA does not store any data; it only links data in the tasks**. This feature is really cool as you will always have control of the data. 
+**PYBOSSA does not store any data; it only links data in the tasks**. This feature is really cool as you will always have control of the data.
 
 While PYBOSSA internally uses JSON for storing the data, you can add  tasks to your project using several formats:
 
@@ -173,7 +173,7 @@ structure as the CSV file (the keys are the same):
 
 ``` javascript
 { 'link': 'http://www.flickr.com/photos/teleyinex/2945647308/',
-  'url_m': 'http://farm4.staticflickr.com/3208/2945647308_f048cc1633_m.jpg', 
+  'url_m': 'http://farm4.staticflickr.com/3208/2945647308_f048cc1633_m.jpg',
   'url_b': 'http://farm4.staticflickr.com/3208/2945647308_f048cc1633_b.jpg' }
 ```
 
@@ -207,13 +207,13 @@ the tasks. Now that we have all the tasks in the project, we can work on the nex
 
 ### Task's redundancy
 
-PYBOSSA by default will send a task to different users (authenticated 
+PYBOSSA by default will send a task to different users (authenticated
 and anonymous users) until 30 different task runs are obtained for each task. This is usually known as **redundancy**, and we will use it to validate the analysis of the task. The whole aim of this value is to avoid trolls to participate several times in the same task, answering wrong on purpose so that we can have a valid statistical analysis of the submitted contributions by the volunteers.
 
 PYBOSSA does not allow the same user to submit more than one
 answer (task runs in PYBOSSA lingo) to the same task. PYBOSSA identifies anonymous users via their IP, while registered users via their PYBOSSA id.
 
-Why PYBOSSA uses a default value of 30? Well, because we are getting 30 observations for a task, and if the data is normal, at least 30 samples should be obtained to get that model. In any case, you can easily change this value for each, using the task settings section of your project (or via the API using the [pbs](pbs.md#updating-tasks-redundancy-from-a-project) tool). 
+Why PYBOSSA uses a default value of 30? Well, because we are getting 30 observations for a task, and if the data is normal, at least 30 samples should be obtained to get that model. In any case, you can easily change this value for each, using the task settings section of your project (or via the API using the [pbs](pbs.md#updating-tasks-redundancy-from-a-project) tool).
 
 If you want to improve the quality of the results for one task and get more confidence in the data when you will analyze it, you can modify the redundancy value with the pbs command. For example, to reduce the number of users that will analyze each task to ten, run the following command:
 
@@ -304,7 +304,7 @@ messages to the user about the success of an action, for instance, that an answe
 
 ``` html
 <div class="row">
-  <!-- Success and Error Messages for the user --> 
+  <!-- Success and Error Messages for the user -->
   <div class="span6 offset2" style="height:50px">
     <div id="success" class="alert alert-success" style="display:none;">
       <a class="close">×</a>
@@ -369,7 +369,7 @@ The content for the first column where we will be showing the question of the ta
     <div class="progress progress-striped">
         <div id="progress" rel="tooltip" title="#" class="bar" style="width: 0%;"></div>
     </div>
-    <!-- 
+    <!--
         This project uses Disqus to allow users to provide some feedback.
         The next section includes a button that when a user clicks on it will
         load the comments, if any, for the given task
@@ -419,7 +419,7 @@ The second section of the skeleton, if we join the previous snippets of code wil
         <div class="progress progress-striped">
             <div id="progress" rel="tooltip" title="#" class="bar" style="width: 0%;"></div>
         </div>
-        <!-- 
+        <!--
             This project uses Disqus to allow users to provide some feedback.
             The next section includes a button that when a user clicks on it will
             load the comments, if any, for the given task
@@ -483,14 +483,14 @@ The **pybossa.presentTask** method will be called when a task has been obtained 
 
 ``` javascript
 { question: project.description,
-  task: { 
+  task: {
           id: value,
           ...,
-          info: { 
-                  url_m: 
+          info: {
+                  url_m:
                   link:
-                 } 
-        } 
+                 }
+        }
 }
 ```
 
@@ -575,7 +575,7 @@ function loadUserProgress() {
         var pct = Math.round((data.done*100)/data.total);
         $("#progress").css("width", pct.toString() +"%");
         $("#progress").attr("title", pct.toString() + "% completed!");
-        $("#progress").tooltip({'placement': 'left'}); 
+        $("#progress").tooltip({'placement': 'left'});
         $("#total").text(data.total);
         $("#done").text(data.done);
     });
@@ -612,7 +612,7 @@ The method allows us to give a successful pop-up feedback for the user, so you c
 pybossa.saveTask( taskid, answer ).done(
   function( data ) {
       // Show the feedback div
-      $("#success").fadeIn(); 
+      $("#success").fadeIn();
       // Fade out the pop-up after a 1000 miliseconds
       setTimeout(function() { $("#success").fadeOut() }, 1000);
   };
@@ -648,9 +648,9 @@ The presenter will load one task, and you will be able to submit and
 save one answer for the current task.
 
 ## Publishing the project
-Until now, the project has been in testing mode. This means that you can play with your project as much as you want. You can invite a few friends or colleauges to test it, just to know that everything works. 
+Until now, the project has been in testing mode. This means that you can play with your project as much as you want. You can invite a few friends or colleauges to test it, just to know that everything works.
 
-In this mode PYBOSSA will work as a published project, so you can test it, however, it is not published so it's not visible to users on the server unless you share the link to it. 
+In this mode PYBOSSA will work as a published project, so you can test it, however, it is not published so it's not visible to users on the server unless you share the link to it.
 
 Once you are happy, you can publish the project. When you publish the project, PYBOSSA will clean your tests and leave it clean for your contributors. Thus, don't be afraid and test as much as you want!
 
@@ -866,7 +866,7 @@ Another option for translating your project to different languages is
 using a JSON object like this:
 
 ``` javascript
-messages = {"en": 
+messages = {"en":
                {"welcome": "Hello World!,
                 "bye": "Good bye!"
                },
@@ -1040,7 +1040,7 @@ completed using this URL:
     GET http://PYBOSSA-SERVER/api/task?state=completed
 
 !!! note
-    If your project has more than 20 tasks, then you will need to use the [API pagination](api.md#list), as by default PYBOSSA API only returns the first 20 items.
+    If your project has more than 20 tasks, then you will need to use the [API pagination](../api/intro.md#list), as by default PYBOSSA API only returns the first 20 items.
 
 Once you have obtained the list of completed tasks, your script could
 start requesting the collected answers for the given tasks:
@@ -1133,4 +1133,4 @@ If something goes wrong, you should get an error message similar to the followin
 The error message will have the information regarding the problems it has found when using the API.
 
 !!! note
-    Since version 2.0.1 PYBOSSA enforces API Rate Limiting, so you might exceed the number of allowed requests, getting a 429 error. Please see [rate-limiting section](api.md#rate-limiting).
+    Since version 2.0.1 PYBOSSA enforces API Rate Limiting, so you might exceed the number of allowed requests, getting a 429 error. Please see [rate-limiting section](../api/intro.md#rate-limiting).

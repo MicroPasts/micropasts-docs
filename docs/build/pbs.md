@@ -6,11 +6,11 @@ In this section we'll learn how we can use the command line to interact with our
 
 **PBS** is a simple command line interface to a PYBOSSA server. The command allows you to:
 
-* create projects, 
-* add tasks from a CSV, Excel or JSON file, 
+* create projects,
+* add tasks from a CSV, Excel or JSON file,
 * show progress when adding tasks
 * delete tasks,
-* updated redundancy for tasks, 
+* updated redundancy for tasks,
 * and update the project templates.
 
 ## Installation
@@ -32,7 +32,7 @@ By default, PBS does not need a config file. However, you will have to specify f
 that you want to use, all you have to do is pass it as an argument:
 
 ``` bash
-pbs --server http://server.com --api-key yourkey subcommand
+pbs --server https://crowdsourced.MicroPasts.org --api-key yourkey subcommand
 ```
 
 If you work with two or more servers, then, remembering all the keys, and server URLs could be problematic, as well as you will be leaving a trace in your BASH history file. For this reason, pbs has a
@@ -143,7 +143,7 @@ This solution allows you to use for example webpack plus babel to transpile your
 To use this solution, just transpile to a file named bundle.js or bundle.min.js.
 
 !!! note
-    If there's a minified version of the file, bundle.min.js, that file will always be used instead of bundle.js. 
+    If there's a minified version of the file, bundle.min.js, that file will always be used instead of bundle.js.
 
 ### Auto-updating while developing a PYBOSSA project
 
@@ -181,7 +181,7 @@ Adding tasks is very simple. You can have your tasks in these formats:
 
 Therefore, adding tasks to your project is as simple as this command:
 
-``` bash 
+``` bash
 pbs add_tasks --tasks-file tasks_file.json
 ```
 
@@ -189,7 +189,7 @@ If you want to see all the available options, please check the
 **--help** command:
 
 !!! note
-    By default, PYBOSSA servers use a rate limit for avoiding abuse of the API. For this reason, you can only do usually 300 requests per every 15 minutes. If you are going to add more than 300 tasks, pbs will detect it and warn you, auto-enabling the throttling for you to respect the limits. Please, see [the rate-limiting section](api.md#rate-limiting) for more details.
+    By default, PYBOSSA servers use a rate limit for avoiding abuse of the API. For this reason, you can only do usually 300 requests per every 15 minutes. If you are going to add more than 300 tasks, pbs will detect it and warn you, auto-enabling the throttling for you to respect the limits. Please, see [the rate-limiting section](../api/intro.md#rate-limiting) for more details.
 
 ``` bash
 pbs add_tasks --help
