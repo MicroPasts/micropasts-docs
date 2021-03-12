@@ -40,6 +40,7 @@ nav:
       - 'Administering PYBOSSA': 'installation/admin.md'
       - 'Testing PYBOSSA with Vagrant': 'installation/vagrant.md'
       - 'Security': 'installation/security.md'
+      - 'FAQ' : 'nstallation/faq.md'
   - MicroPasts PYBOSSA Theme: 'theme/intro.md'
   - Building a project:
       - 'Introduction': 'build/intro.md'
@@ -52,7 +53,7 @@ nav:
       - 'Domain model': 'build/model.md'
   - MicroPasts Projects:
       - 'Introduction': 'projects/introduction.md'
-      - 'Project creation':
+      - 'Overviews':
             - 'Creating a new project': 'projects/creating-a-new-project.md'
             - 'Bronze Age Index': 'projects/bai.md'
             - 'Egypt Exploration Society': 'projects/ees.md'
@@ -118,6 +119,4 @@ nav:
       - 'Server stats':
          - 'PYBOSSA endpoints':
             - Methods: 'api/stats.md'
-  - Source code and scripts: 'github/intro.md'
   - GDPR: 'gdpr.md'
-  - FAQ : 'faq.md'
