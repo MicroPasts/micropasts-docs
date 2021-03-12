@@ -1,6 +1,10 @@
+Before you begin, you need to remember several things about PYBOSSA.
 
+1. No assets are stored within the platform
+2. Your images or files that you want people to work on, must be accessible on
+an http link
 
-!!! question "How do I open this page?"
+!!! question "How do I open these pages?"
 
     You must be registered to access these pages.
 
@@ -14,7 +18,7 @@ Below, we will run through each method:
 
 ## Create a new project from scratch using Github and PBS<a name="method1"></a>
 
-This is very well documented by the original [PYBOSSA documentation]()/build/pbs/)
+This is very well documented by the original [PYBOSSA documentation](/build/pbs/)
 Example projects that have been generated using this method can be found on our Github profile.
 
 * [Horsfield archive tagging](https://github.com/MicroPasts/MicroPasts-Horsfield)

@@ -129,20 +129,21 @@ You now want to configure the task settings. This is based on the usual question
 
 ### Project admin
 
+**Viewing task progress**: You can see how tasks are progressing easily, and download each individual task's data
+directly from the tasks interface. To do this go to tasks > browse tasks and if you want to see data being entered click download task results.
 **Ownership**: You can share ownership of the project with other users, which allows you to administer
 the task settings and other options. To add a co-owner, go to settings > coowners and search for the user you want to add.
-
-**Project report**: To download a csv report for the project go to settings and export report.
+**Project report**: To download a CSV report for the project go to settings and export report.
 
 ### Extracting data
 
-Like all MicroPasts projects, we tend to use scripting languages like Python or R to manipulate the data and redisplay or analyse. This uses the PYBOSSA API and export of user data to build your data analysis up. An example of how to do this:
+Like all MicroPasts projects, we tend to use scripting languages like Python or R to manipulate the data and redisplay or analyse. This uses the PYBOSSA API and export of user data to build your data analysis up. An example of how to do this with R is below:
 
 ```R
 #' ----
 #' title: " A script for manipulation of the Montpelier crowdsourcing project
 #' author: "Daniel Pett"
-#' date: "09/07/2016"
+#' date: "12/03/2021"
 #' output: csv_document
 #' ----
 #'
@@ -150,7 +151,7 @@ Like all MicroPasts projects, we tend to use scripting languages like Python or 
 
 # Set the project name - When you change this to the project slug you choose which one to get
 # data for.
-project <- 'montpeliernailcatalogueproject'
+project <- 'cudl'
 
 # Create path string
 pathToDir <- paste0("~/Documents/research/micropasts/analysis/",project)
@@ -190,7 +191,6 @@ users <- read.csv('csv/all_users.csv', header=TRUE)
 users <- users[,c("id","fullname","name")]
 
 
-
 # Set the base url of the application
 baseUrl <- 'http://crowdsourced.micropasts.org/project/'
 
@@ -216,7 +216,7 @@ trTfull <- trT
 
 # extract just task id and image URL, title
 trT <- trT[,c(1,2)]
-names(trT) <- c("taskID","pdfPath")
+names(trT) <- c("taskID","url_b")
 
 # Import task runs from json
 taskruns <- '/tasks/export?type=task_run&format=json'
@@ -243,8 +243,6 @@ for (a in 3:resultsCount){
   test$siteNumber <- json$info$siteNumber[a]
   test$taskID <- json$task_id[a]
   test$userID <- json$user_id[a]
-  #remove the rubbish empty rows
-  test <- test[(1:24),]
   data <- rbind(data, test)
 }
 # Enforced to UPPER
@@ -252,24 +250,18 @@ data <- as.data.frame(sapply(data, toupper))
 
 # Set up user details
 names(users) <- c("userID", "fullname")
-named <- merge(data, users, by="userID", all.x=FALSE)
+final <- merge(data, users, by="userID", all.x=FALSE)
 
 # Merge for file paths to be added by line
-named <- merge(named, trT, by="taskID", all.x=FALSE)
+final <- merge(named, trT, by="taskID", all.x=FALSE)
 
 # Here you label the column names that you want for your csv file header row
-colnames(named) <- c('Inv #', 'Cat #', 'NCat Code', 'Material Code',
-                     'Condition code', 'Artifact type', 'Length in Inches',
-                     'Width in inches', 'Number', 'Grams', 'Notes', 'Problem',
-                     'DE code', 'Page number', 'Site number', 'Fullname',
-                     'username', 'Path to file')
+colnames(final) <- c()
 
-# Tentative ordering
-named <- named[order(named['Cat #'], named['DE code']),]
 
 # Create a name and path for your csv file
 csvname <- paste0('csv/', project, '.csv')
 # Write the csv file to your path
-write.csv(named, file=csvname, row.names=FALSE, na="")
+write.csv(final, file=csvname, row.names=FALSE, na="")
 
 ```
