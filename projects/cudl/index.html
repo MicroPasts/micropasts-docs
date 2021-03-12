@@ -2037,15 +2037,17 @@ in the snippets directory.</p>
 <li>Do you want some tasks to be golden or high priority? Go to tasks &gt; settings &gt; priority and set the factors you want for the ids of the tasks</li>
 </ul>
 <h3 id="project-admin">Project admin<a class="headerlink" href="#project-admin" title="Permanent link">&para;</a></h3>
-<p><strong>Ownership</strong>: You can share ownership of the project with other users, which allows you to administer
-the task settings and other options. To add a co-owner, go to settings &gt; coowners and search for the user you want to add.</p>
-<p><strong>Project report</strong>: To download a csv report for the project go to settings and export report.</p>
+<p><strong>Viewing task progress</strong>: You can see how tasks are progressing easily, and download each individual task&rsquo;s data
+directly from the tasks interface. To do this go to tasks &gt; browse tasks and if you want to see data being entered click download task results.
+<strong>Ownership</strong>: You can share ownership of the project with other users, which allows you to administer
+the task settings and other options. To add a co-owner, go to settings &gt; coowners and search for the user you want to add.
+<strong>Project report</strong>: To download a CSV report for the project go to settings and export report.</p>
 <h3 id="extracting-data">Extracting data<a class="headerlink" href="#extracting-data" title="Permanent link">&para;</a></h3>
-<p>Like all MicroPasts projects, we tend to use scripting languages like Python or R to manipulate the data and redisplay or analyse. This uses the PYBOSSA API and export of user data to build your data analysis up. An example of how to do this:</p>
+<p>Like all MicroPasts projects, we tend to use scripting languages like Python or R to manipulate the data and redisplay or analyse. This uses the PYBOSSA API and export of user data to build your data analysis up. An example of how to do this with R is below:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#&#39; ----</span>
 <span class="c1">#&#39; title: &quot; A script for manipulation of the Montpelier crowdsourcing project</span>
 <span class="c1">#&#39; author: &quot;Daniel Pett&quot;</span>
-<span class="c1">#&#39; date: &quot;09/07/2016&quot;</span>
+<span class="c1">#&#39; date: &quot;12/03/2021&quot;</span>
 <span class="c1">#&#39; output: csv_document</span>
 <span class="c1">#&#39; ----</span>
 <span class="c1">#&#39;</span>
@@ -2053,7 +2055,7 @@ the task settings and other options. To add a co-owner, go to settings &gt; coow
 
 <span class="c1"># Set the project name - When you change this to the project slug you choose which one to get</span>
 <span class="c1"># data for.</span>
-<span class="n">project</span> <span class="o">&lt;-</span> <span class="s">&#39;montpeliernailcatalogueproject&#39;</span>
+<span class="n">project</span> <span class="o">&lt;-</span> <span class="s">&#39;cudl&#39;</span>
 
 <span class="c1"># Create path string</span>
 <span class="n">pathToDir</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;~/Documents/research/micropasts/analysis/&quot;</span><span class="p">,</span><span class="n">project</span><span class="p">)</span>
@@ -2093,7 +2095,6 @@ the task settings and other options. To add a co-owner, go to settings &gt; coow
 <span class="n">users</span> <span class="o">&lt;-</span> <span class="n">users</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="s">&quot;fullname&quot;</span><span class="p">,</span><span class="s">&quot;name&quot;</span><span class="p">)]</span>
 
 
-
 <span class="c1"># Set the base url of the application</span>
 <span class="n">baseUrl</span> <span class="o">&lt;-</span> <span class="s">&#39;http://crowdsourced.micropasts.org/project/&#39;</span>
 
@@ -2119,7 +2120,7 @@ the task settings and other options. To add a co-owner, go to settings &gt; coow
 
 <span class="c1"># extract just task id and image URL, title</span>
 <span class="n">trT</span> <span class="o">&lt;-</span> <span class="n">trT</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">)]</span>
-<span class="nf">names</span><span class="p">(</span><span class="n">trT</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;taskID&quot;</span><span class="p">,</span><span class="s">&quot;pdfPath&quot;</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">trT</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;taskID&quot;</span><span class="p">,</span><span class="s">&quot;url_b&quot;</span><span class="p">)</span>
 
 <span class="c1"># Import task runs from json</span>
 <span class="n">taskruns</span> <span class="o">&lt;-</span> <span class="s">&#39;/tasks/export?type=task_run&amp;format=json&#39;</span>
@@ -2146,8 +2147,6 @@ the task settings and other options. To add a co-owner, go to settings &gt; coow
   <span class="n">test</span><span class="o">$</span><span class="n">siteNumber</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">info</span><span class="o">$</span><span class="n">siteNumber</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
   <span class="n">test</span><span class="o">$</span><span class="n">taskID</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">task_id</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
   <span class="n">test</span><span class="o">$</span><span class="n">userID</span> <span class="o">&lt;-</span> <span class="n">json</span><span class="o">$</span><span class="n">user_id</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
-  <span class="c1">#remove the rubbish empty rows</span>
-  <span class="n">test</span> <span class="o">&lt;-</span> <span class="n">test</span><span class="p">[(</span><span class="m">1</span><span class="o">:</span><span class="m">24</span><span class="p">),]</span>
   <span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="c1"># Enforced to UPPER</span>
@@ -2155,25 +2154,19 @@ the task settings and other options. To add a co-owner, go to settings &gt; coow
 
 <span class="c1"># Set up user details</span>
 <span class="nf">names</span><span class="p">(</span><span class="n">users</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;userID&quot;</span><span class="p">,</span> <span class="s">&quot;fullname&quot;</span><span class="p">)</span>
-<span class="n">named</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">users</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;userID&quot;</span><span class="p">,</span> <span class="n">all.x</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">users</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;userID&quot;</span><span class="p">,</span> <span class="n">all.x</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
 
 <span class="c1"># Merge for file paths to be added by line</span>
-<span class="n">named</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">named</span><span class="p">,</span> <span class="n">trT</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;taskID&quot;</span><span class="p">,</span> <span class="n">all.x</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">named</span><span class="p">,</span> <span class="n">trT</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;taskID&quot;</span><span class="p">,</span> <span class="n">all.x</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
 
 <span class="c1"># Here you label the column names that you want for your csv file header row</span>
-<span class="nf">colnames</span><span class="p">(</span><span class="n">named</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;Inv #&#39;</span><span class="p">,</span> <span class="s">&#39;Cat #&#39;</span><span class="p">,</span> <span class="s">&#39;NCat Code&#39;</span><span class="p">,</span> <span class="s">&#39;Material Code&#39;</span><span class="p">,</span>
-                     <span class="s">&#39;Condition code&#39;</span><span class="p">,</span> <span class="s">&#39;Artifact type&#39;</span><span class="p">,</span> <span class="s">&#39;Length in Inches&#39;</span><span class="p">,</span>
-                     <span class="s">&#39;Width in inches&#39;</span><span class="p">,</span> <span class="s">&#39;Number&#39;</span><span class="p">,</span> <span class="s">&#39;Grams&#39;</span><span class="p">,</span> <span class="s">&#39;Notes&#39;</span><span class="p">,</span> <span class="s">&#39;Problem&#39;</span><span class="p">,</span>
-                     <span class="s">&#39;DE code&#39;</span><span class="p">,</span> <span class="s">&#39;Page number&#39;</span><span class="p">,</span> <span class="s">&#39;Site number&#39;</span><span class="p">,</span> <span class="s">&#39;Fullname&#39;</span><span class="p">,</span>
-                     <span class="s">&#39;username&#39;</span><span class="p">,</span> <span class="s">&#39;Path to file&#39;</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">final</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">()</span>
 
-<span class="c1"># Tentative ordering</span>
-<span class="n">named</span> <span class="o">&lt;-</span> <span class="n">named</span><span class="p">[</span><span class="nf">order</span><span class="p">(</span><span class="n">named</span><span class="p">[</span><span class="s">&#39;Cat #&#39;</span><span class="p">],</span> <span class="n">named</span><span class="p">[</span><span class="s">&#39;DE code&#39;</span><span class="p">]),]</span>
 
 <span class="c1"># Create a name and path for your csv file</span>
 <span class="n">csvname</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#39;csv/&#39;</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="s">&#39;.csv&#39;</span><span class="p">)</span>
 <span class="c1"># Write the csv file to your path</span>
-<span class="nf">write.csv</span><span class="p">(</span><span class="n">named</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">csvname</span><span class="p">,</span> <span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">final</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">csvname</span><span class="p">,</span> <span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div>
                 
               
